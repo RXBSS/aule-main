@@ -1,0 +1,28 @@
+{
+    "title": "Zählerstände Anleitung",
+    "table": {
+        "name": "zaehlerstaende_anleitungen",
+        "joins": [
+            "LEFT JOIN `status` ON `status`.`status_id` = `zaehlerstaende_anleitungen`.`status_id` AND `status`.`bereich` = 'zaehlerstaende_anleitungen'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "status_name": {
+            "title": "Status",
+            "table": "status",
+            "field": "bezeichnung"
+        },
+        "status_icon": {
+            "title": "Status Icon",
+            "table": "status",
+            "field": "icon",
+            "hidden": true
+        }
+    }
+}

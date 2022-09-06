@@ -1,0 +1,308 @@
+var adressenKunde = {
+
+
+    // TODO: Kontosperre Card nach abschicken wieder reseten damit ein nächste Mitarbeitet z.B gesperrt werden kann
+    // TODO: Wenn man das ganze wieder Rückgängig machen will macht man dies unter Kontakte
+
+    init: function() {
+
+        var me = this; 
+
+        // ID 
+        me.id = app.getUrlId();
+
+        // Standardmäßig hide
+        $('#betreiberOn').hide();
+
+        // Init der Form
+        me.initForm();
+        
+        // Email Rechnungen Details soll angezeigt werden
+        me.showAndHideToggler($('input[name="email_rechnung"]'), '.email-rechnung-toggler');
+
+        // Beim Init der Seite Prüfen ob Kunde checked ist damit der Content gezeigt werden kann
+        me.showAndHideToggler($('input[name="ist_kunde"]'), '.ist-kunde-toggler');
+
+        me.showAndHideToggler($('#betreiber'), '#betreiberOn');
+
+        // Eventlistener
+        me.addEventListener();
+
+    },
+
+    initForm() {
+        var me = this;
+
+        // Init Kunden Card 
+        me.formKunde = new CardForm('#kundeStammdaten');
+
+        var fields = {
+            betreiber_strasse: {
+                validators: {
+                    callback: {
+                        message: 'Das Feld muss ausgefüllt sein',
+                        callback: function() {
+
+                            // Ließt den Value aus
+                            var betreiber_strasse = me.formKunde.container.find('input[name="betreiber_strasse"]').val();
+
+                            // Callback der Formvalidation
+                            return me.callbackFormValidation(betreiber_strasse);
+                        }
+                    }
+                }
+            },
+            betreiber_land: {
+                validators: {
+                    callback: {
+                        message: 'Das Feld muss ausgefüllt sein',
+                        callback: function() {
+
+                            // Ließt den Value aus
+                            var betreiber_land = me.formKunde.container.find('select[name="betreiber_land"]').val();
+
+                            // Callback der Formvalidation
+                            return me.callbackFormValidation(betreiber_land);
+                        }
+                    }
+                }
+            },
+            betreiber_plz: {
+                validators: {
+                    callback: {
+                        message: 'Das Feld muss ausgefüllt sein',
+                        callback: function() {
+
+                            // Ließt den Value aus
+                            var betreiber_plz = me.formKunde.container.find('input[name="betreiber_plz"]').val();
+
+                            // Callback der Formvalidation
+                            return me.callbackFormValidation(betreiber_plz);
+                        }
+                    }
+                }
+            },
+            betreiber_ort: {
+                validators: {
+                    callback: {
+                        message: 'Das Feld muss ausgefüllt sein',
+                        callback: function() {
+
+                            // Ließt den Value aus
+                            var betreiber_ort = me.formKunde.container.find('input[name="betreiber_ort"]').val();
+
+                            // Callback der Formvalidation
+                            return me.callbackFormValidation(betreiber_ort);
+                        }
+                    }
+                }
+            }
+        }
+
+        me.formKunde.initValidation(fields);
+
+    },
+
+    // Funktion Callback Validierung
+    callbackFormValidation(el) {
+
+        // Wenn Betreiber checked ist und das element !NICHT! leer ist dann OK
+        if($('#betreiber').is(':checked') && el) {
+            return true;
+
+        // Wenn die andere Option ausgewählt wurde dann ist es auch OK
+        } else if($('#rechnungempfaenger').is(':checked')) {
+            return true;
+        
+        // In allen anderen Fällen soll Meldung kommen
+        } else {
+            return false;
+        }
+    },
+
+
+    addEventListener() {
+
+
+        var me = this; 
+
+        // Prüft ob der Toggler an oder aus ist
+        $('input[name="ist_kunde"]').on('change', function() {
+            me.kundeToggler($(this), me.formKunde, 'ist_kunde');
+        });
+
+        // Wird beim onChange der Email checkbox getriggert
+        $('input[name="email_rechnung"]').on('change', function() {
+            me.showAndHideToggler($('input[name="email_rechnung"]'), '.email-rechnung-toggler');
+        });
+
+
+        // --------------------------------------------------------------------
+        // Form Handler
+
+        me.formKunde.on('submit', function() {
+            me.submit();
+        });
+
+        // Wenn Radio Gecheckt wird sollen die Relevanten Felder eingeblendet werden
+        me.formKunde.container.find('input[name="rechnungsempfaenger"]').on('change', function() {
+            me.showAndHideToggler($('#betreiber'), '#betreiberOn');
+        });
+
+        // Kundee wir geladen
+        me.formKunde.load('loadFormKunde', 'adressen-handle.php', me.id, function() {})
+
+        // Wenn in der Form Card auf Abbrechen gedrückt wird
+        $('.btn-form-discard').on('click', function() {
+
+
+            // $('input[name="rechnungsempfaenger"]').prop()
+
+            if($('#betreiber').prop('checked')) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+            
+            // Wenn Radio gecheckt ist sollen die Adressen Felder wieder angezeigt werden
+            // if(!$('#betreiber').attr("checked", "checked")) {
+            //     $('#betreiberOn').show();
+            //     console.log("dddfsdfsdADSASDASDddf");
+
+            // } else if($('#rechnungempfaenger').attr("checked", "checked")) {
+
+            //     console.log("dddddf");
+            //     $('#betreiberOn').hide();
+            // }
+
+        });
+
+    },
+
+    // Email
+    submit() {
+
+        var me = this;
+
+        // Additional Data
+        var data = [
+            formData = me.formKunde.getData(),
+            id = app.getUrlId()
+        ]; 
+
+        // Save
+        me.formKunde.save('kundenSave', "adressen-handle", function(res) {
+            
+            // Reset
+            me.reset();
+
+            console.log(res.data.log[2].rechnungsempfaenger);
+
+            if(res.data.log[2].rechnungsempfaenger == 'rechnungsempfaenger') {
+                $('#betreiberOn input, #betreiberOn select').each(function() {
+                
+                    $(this).val('');
+
+                    $('#selectLand').prepend('<option selected="selected">Bitte wählen</option>').change();
+
+
+                });
+            }
+
+            // Erfolg
+            app.notify.success.fire("Erfolgreich","Ihre Aktion wurde erfolgreich angepasst");
+
+        }, function(a, b, c) {
+
+            // Error
+            app.notify.error.fire("Nicht Erfolgreich", b.data.error);
+        });
+
+    }, 
+
+    // 
+    showAndHideToggler(el, toggler) {
+
+        // Wennm die Checkbox checked ist
+        if(el.is(':checked')) {
+
+            // Content zeigen
+            $(toggler).show();
+        } else {
+
+            // Content hide
+            $(toggler).hide();
+
+        }
+    },
+
+    reset() {
+
+        $('select[name="kontosperre_grund"]').val('');
+        $('#kontakte').val('');
+
+
+        // Damit die Option 'Bitte Wählen' nicht nochmal kommmt
+        $("#kontakte option").each(function() {
+            if($(this).val() == 'Bitte wählen') {
+                $(this).remove();
+            }
+        });
+
+        // Erste Option Bitte wählen
+        $('#kontakte').prepend('<option selected="selected">Bitte wählen</option>').change();
+
+
+    },
+
+    kundeToggler(test, form, task) {
+
+        var me = this;
+
+        // Sweet Alert Abfrage
+        app.alert.question.fire('Wollen Sie diese Änderung wirklich vornehmen?').then(function(result) {
+
+            // Wenn Gespeichert werden soll
+            if(result.isConfirmed){
+
+                // Daten die geschickt werden
+                var data = [
+                    formData = form.getData(),
+                    id = app.getUrlId()
+                ]; 
+
+                // Anfrage an die Handle
+                app.simpleRequest(task, "adressen-handle", data, function(response) {
+
+                    // Alles wird wieder angezeigt
+                    $('.ist-kunde-toggler').show();
+
+                    me.showAndHideToggler($('input[name="ist_kunde"]'), '.ist-kunde-toggler');
+
+
+                    if($('#pills-kunde i')[0].className == 'fa-solid fa-toggle-on') {
+                        $('#pills-kunde i').remove();
+                        $('#pills-kunde').prepend('<i class="fa-solid fa-toggle-off"></i>');
+
+                    } else {
+                        $('#pills-kunde i').remove();
+                        $('#pills-kunde').prepend('<i class="fa-solid fa-toggle-on"></i>');
+                    }
+
+
+                    // Todo: Reload glaub ich nicht die beste Lösung auch wenn es die einfachste ist an der Stelle
+                    // location.reload();
+
+                }, false);
+
+            } else {
+
+                // Alle Änderungen verwerfen
+                form.discard();
+
+            }
+        });
+
+    }
+
+}

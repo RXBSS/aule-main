@@ -1,0 +1,72 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Adressen",
+    "table": {
+        "name": "adressen"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "lieferant_bezeichnung": {
+            "title": "Lieferant Bezeichnung"
+        },
+        "firmenname": {
+            "title": "Firmenname"
+        },
+        "namenszusatz": {
+            "title": "Namenszusatz",
+            "hidden": true
+        },
+        "strasse": {
+            "title": "Straße"
+        },
+        "plz": {
+            "title": "PLZ"
+        },
+        "ort": {
+            "title": "Ort"
+        },
+        "land": {
+            "title": "Land"
+        },
+        "telefon": {
+            "title": "Telefon"
+        },
+        "telefax": {
+            "title": "Telefax",
+            "hidden": true
+        },
+        "email":{
+            "title": "E-Mail"
+        },
+        "website":{
+            "title": "Website",
+            "hidden": true
+        },
+        "steuernummer":{
+            "title": "Steuernummer",
+            "hidden": true
+        },
+        "umsatzsetuer_id":{
+            "title": "Umsatzsetuer ID",
+            "hidden": true
+        },
+        "fahrtzeit":{
+            "title": "Fahrtzeit",
+            "hidden": true
+        },
+        "kilometer":{
+            "title": "Kilometer",
+            "hidden": true
+        },
+        "latitude":{
+            "title": "Latitude",
+            "hidden": true
+        },
+        "longitude":{
+            "title": "Longitude",
+            "hidden": true
+        }
+        
+    }
+}

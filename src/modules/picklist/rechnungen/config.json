@@ -1,0 +1,56 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Beispiel Liste",
+
+
+    "table": {
+        "name": "rechnungen"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "datum": {
+            "title": "Zeitstempel",
+            "format": "date"
+        },
+        "status_id": {
+            "title": "Status"
+        },
+        "herkunft": {
+            "title": "Herkunft"
+        },
+        "referenz_id": {
+            "title": "Referenz ID"
+        },
+        "netto": {
+            "title": "Netto",
+            "format": "betrag",
+            "format-config": ["€"]
+        },
+        "mwst": {
+            "title": "MwSt.",
+            "format": "betrag",
+            "format-config": ["€"]
+        },
+        "brutto": {
+            "title": "Brutto",
+            "field": "(`rechnungen`.`netto` * ((`rechnungen`.`mwst` / 100) + 1))",
+            "type": "query",
+            "format": "betrag",
+            "format-config": ["€"]
+        },
+        "gezahlt": {
+            "title": "Gezahlt",
+            "format": "betrag",
+            "format-config": ["€"]
+        },
+        "ursprung_oeffnen": {
+            "type": "special",
+            "title": "Ursprung"
+        },
+        "dokument_oeffnen": {
+            "type": "special",
+            "title": "Dokument öffnen"
+        }
+    }
+}

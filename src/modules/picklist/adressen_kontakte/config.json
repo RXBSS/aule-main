@@ -1,0 +1,53 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Adressen Kontakte",
+    "table": {
+        "name": "adressen_kontakte",
+        "joins": [
+            "LEFT JOIN `adressen` ON `adressen`.`id` = `adressen_kontakte`.`adressen_id`",
+            "LEFT JOIN `kontakte` ON `kontakte`.`id` = `adressen_kontakte`.`kontakte_id`"
+
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "adressen_id": {
+            "title": "adressen_id",
+            "hidden": true
+        },
+        "name": {
+            "title": "Name Der Firma",
+            "table": "adressen",
+            "field": "name"
+        },
+        "kontakte_id": {
+            "title": "kontakte_id",
+            "hidden": true
+        },
+        "vorname": {
+            "title": "Bearbeiter",
+            "table": "kontakte",
+            "field": "vorname",
+            "hidden": true
+        },
+        "nachname": {
+            "title": "Bearbeiter",
+            "table": "kontakte",
+            "field": "nachname",
+            "hidden": true
+        },
+        "adminrechte": {
+            "title": "adminrechte",
+            "hidden": true
+        },
+        "abteilung": {
+            "title": "Abteilung"
+        },
+        "funktion": {
+            "title": "Funktion"
+        }
+        
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege_klauseln",
+    "table": {
+        "name": "vertraege_klauseln",
+        "joins": [
+            "LEFT JOIN vertraege_gruppen vg ON vg.id = vertraege_klauseln.gruppen_id",
+            "LEFT JOIN status s ON s.status_id = vertraege_klauseln.status_id AND s.bereich = 'vertraege_vorlagen'",
+            "INNER JOIN (SELECT klausel_referenz_id, MAX(version) version FROM vertraege_klauseln GROUP BY klausel_referenz_id) b ON vertraege_klauseln.klausel_referenz_id = b.klausel_referenz_id AND vertraege_klauseln.version = b.version"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "klausel_referenz_id": {
+            "title": "Referenz",
+            "sortable": true
+        },
+        "status_id": {
+            "title": "Status",
+            "hidden": true
+        },
+        "status": {
+            "title": "Status",
+            "table": "s",
+            "type": "multi-field",
+            "field": ["icon","bezeichnung"],
+            "glue": " "
+        },
+        "bezeichnung": {
+            "title": "Status",
+            "table": "s",
+            "type": "multi-field",
+            "field": [
+                "icon",
+                "bezeichnung"
+            ],
+            "glue": " ",
+            "filter": {
+                "type": "quickselect",
+                "qs-name": "vertraege_status",
+                "filter": "test"
+            },
+            "hidden": true
+        },
+        "bezeichnunggruppe": {
+            "title": "Gruppen",
+            "table": "vg",
+            "field": "bezeichnung"
+        },
+        "text": {
+            "title": "Klausel",
+            "format": "substring"
+        },
+        "standard": {
+            "title": "standard",
+            "hidden": true
+        },
+        "version": {
+            "title": "Version"
+        }
+    }
+}

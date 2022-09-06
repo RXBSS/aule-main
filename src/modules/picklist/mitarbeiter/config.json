@@ -1,0 +1,53 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Mitarbeiter",
+    "table": {
+        "name": "mitarbeiter"
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "nummer": {
+            "title": "Nummer"
+        },
+        "vorname": {
+            "title": "Vorname",
+            "hidden": true
+        },
+        "nachname": {
+            "title": "Name",
+            "type": "multi-field",
+            "field": ["vorname", "nachname"],
+            "glue": " "
+            
+        }, 
+        "telefon": {
+            "title": "Telefon",
+            "sortable": false
+        }, 
+        "mobiltelefon": {
+            "title": "Mobiltelefon",
+            "sortable": false
+        }, 
+        "email": {
+            "title": "E-Mail",
+            "sortable": false
+        }, 
+        "geburtstag": {
+            "title": "Geburtstag",
+            "sortable": false
+        }, 
+        "eintrittsdatum": {
+            "title": "Eintrittsdatum"
+        }, 
+        "austrittsdatum": {
+            "title": "Austrittsdatum"
+        }, 
+        "aktiv": {
+            "title": "Aktiv",
+            "format": "yes-no",
+            "format-config": ["Ja","Nein"]
+        }
+    }
+}

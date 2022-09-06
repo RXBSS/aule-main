@@ -1,0 +1,36 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege_klauseln_vertraege",
+
+    "table": {
+        "name": "vertraege_klauseln_vertraege",
+        "joins": [
+            "LEFT JOIN vertraege ON vertraege.id = vertraege_klauseln_vertraege.vertraege_id",
+            "LEFT JOIN vertraege_klauseln ON  vertraege_klauseln.id = vertraege_klauseln_vertraege.klausel_id",
+            "LEFT JOIN vertraege_gruppen ON vertraege_gruppen.id = vertraege_klauseln.gruppen_id"
+        
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "sortable": false
+        },
+        "gruppen": {
+            "title": "Gruppen",
+            "table": "vertraege_gruppen",
+            "field": "bezeichnung",
+            "sortable": false,
+            "format": "substring"
+        },
+        "text": {
+            "title": "Klausel",
+            "table": "vertraege_klauseln",
+            "field": "text",
+            "sortable": false
+        },
+        "klausel_id": {
+            "title": "klausel_id",
+            "hidden": true
+        }
+    }
+}

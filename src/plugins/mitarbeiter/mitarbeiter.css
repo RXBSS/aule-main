@@ -1,0 +1,31 @@
+.custom-plugin-class {
+    color:red;
+}
+
+#modal-mitarbeiter-form .fas {
+    font-size: 18px;
+    /* color: #7ab929; */
+}
+
+#modal-mitarbeiter-form .icon-col {
+    margin-right: -10px;
+}
+
+#modal-mitarbeiter-form .input-col {
+    margin-top: -35px;
+}
+
+@media (max-width: 991px) {
+    .col {
+        flex: 0 0 auto;
+    }
+
+    #modal-mitarbeiter-form .input-col {
+        margin-top: 0.5px;
+    }
+}
+
+/* Margin Top In der ersten Reihe sonst zu viel */
+.first-row {
+    margin-top: -50px;
+}

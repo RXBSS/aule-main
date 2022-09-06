@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteBase /
+
+# Wenn eine Datei nicht gefunden wird, dann wird automatisch .php daran gehangen
+# Das erlaubt es, dass man PHP Dateien ansprechen kann ohne die .php Extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Dieses Dokument wird aufgerufen, wenn eine Seite nicht gefunden werden kann
+ErrorDocument 404 /404.php
+
+# Hier werden Dokumente und Ordner für den Zugriff von außen gesperrt
+# Daten sollten zum Beispiel über den Proxy aufgerufen werden
+
+# Ordner
+RedirectMatch 403 ^/api/.*$
+RedirectMatch 403 ^/data/.*$
+RedirectMatch 403 ^/includes/.*$
+
+# Dokumente
+RedirectMatch 403 /.htaccess
+RedirectMatch 403 ^/config.json$
+RedirectMatch 403 ^/VERSION_ORTHOR$

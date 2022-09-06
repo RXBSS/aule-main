@@ -1,0 +1,47 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Notification",
+    "table": {
+        "name": "notification",
+        "joins": [
+            "LEFT JOIN `mitarbeiter` ON `notification`.`user_id` = `mitarbeiter`.`id` "
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "vorname": {
+            "title": "Name",
+            "table": "mitarbeiter",
+            "field": "vorname"
+        },
+        "nachname": {
+            "title": "Bearbeiter",
+            "table": "mitarbeiter",
+            "field": "nachname",
+            "hidden": true
+        },
+        
+        "aktion": {
+            "title": "Aktion"
+        },
+        "gelesen": {
+            "title": "Gelesen",
+            "format": "yes-no",
+            "format-config": ["<i class='fa-solid fa-eye'></i> Gelesen","<i class='fa-solid fa-eye-slash'></i> Nicht Gelesen"],
+            "hidden": true
+        }, 
+        "zeitstempel_gelesen": {
+            "title": "Gelesen am: "
+        },
+
+
+
+
+        "data": {
+            "title": "Prozess ID"
+        }
+        
+
+    }
+}

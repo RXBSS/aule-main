@@ -1,0 +1,14 @@
+{
+    "title": "<i class=\"fa-solid fa-industry\"></i> Hersteller",
+    "table": {
+        "name": "hersteller"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        }
+    }
+}

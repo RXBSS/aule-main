@@ -1,0 +1,24 @@
+{
+    "title": "Zähler",
+    "table": {
+        "name": "artikel_zaehler",
+        "joins": [
+            "LEFT JOIN `zaehler` ON `artikel_zaehler`.`zaehler_id` = `zaehler`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "artikel_id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung",
+            "table": "zaehler",
+            "field": "bezeichnung"
+        }
+    }
+}

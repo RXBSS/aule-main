@@ -1,0 +1,13 @@
+/backup/*.*
+/dist
+/docs/js
+/docs/php
+/docs/php-cache
+/orthor
+/node_modules
+/vendor
+/composer.json
+/composer.lock
+/package.json
+/package-lock.json
+/src/sql/cmd/all_files.sql

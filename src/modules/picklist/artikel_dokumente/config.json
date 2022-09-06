@@ -1,0 +1,25 @@
+{
+    "title": "Artikel Dokumente",
+
+    "table": {
+        "name": "artikel_dokumente",
+        "joins": "LEFT JOIN `status` ON `status`.`status_id` = `artikel_dokumente`.`art_id` AND `status`.`bereich` = 'artikel_dokumente'"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "artikel_id": {
+            "title": "Artikel ID",
+            "hidden": true
+        },
+        "bezeichnung": {
+            "title": "Beschreibung"
+        },
+        "art": {
+            "title": "Art",
+            "table": "status",
+            "field": "bezeichnung"
+        }
+    }
+}

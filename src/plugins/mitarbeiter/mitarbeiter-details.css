@@ -1,0 +1,41 @@
+#form-mitarbeiter-details .fas {
+    font-size: 18px;
+    /* color: #7ab929; */
+}
+
+#form-mitarbeiter-details .icon-col {
+    margin-right: -35px;
+}
+
+#form-mitarbeiter-details .input-col {
+    margin-top: -35px;
+}
+
+@media (min-width: 992px) and (max-width: 2000px) {
+    #form-mitarbeiter-details .input-col {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 991px) {
+    .col {
+        flex: 0 0 auto;
+    }
+
+    #form-mitarbeiter-details .input-col {
+        margin-top: 0.5px;
+    }
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    border: 0;
+    color: #9c9c9c;
+    position: relative;
+    font-size: .95rem;
+    transition: color .4s;
+}
+
+.nav-tabs:not([class*=nav-tabs--]) .nav-link.active {
+    color: #7ab929;
+}

@@ -1,0 +1,781 @@
+{
+	"NotifySweetAlert": {
+		"prefix": [
+			"notify"
+		],
+		"body": [
+			"app.notify.${1:success}.fire(\"${2:Erfolgreich}\",\"${3:Ihre Aktion wurde erfolgreich angepasst}\");"
+		],
+		"description": [
+			"Das ist ein shortcut für Notifier - Sweet Alert"
+		]
+	},
+	"AlertSweetAlert": {
+		"prefix": [
+			"alert"
+		],
+		"body": [
+			"app.alert.${1:success}.fire(\"${2:Jippi}\",\"${3:Das hat ja wunderbar geklappt}\");"
+		],
+		"description": [
+			"Das ist ein shortcut für Alert -  Sweet Alert"
+		]
+	},
+	"loader": {
+		"prefix": [
+			"loader"
+		],
+		"body": [
+			"app.${1:notify}.loader.fire();",
+			"app.${1:notify}.loader.close();"
+		],
+		"description": [
+			"Sweet Alert Loader für notify oder alert "
+		]
+	},
+	"wrapperLoader": {
+		"prefix": [
+			"wrapperLoader"
+		],
+		"body": [
+			"app.wrapperLoader.start();",
+			"app.wrapperLoader.stop();",
+		],
+		"description": [
+			"Loader für den Wrapper"
+		]
+	},
+	"pickliste": {
+		"prefix": [
+			"pickliste"
+		],
+		"body": [
+			"var list = new Picklist(\"#${1:example-pickliste}\", \"${2:example}\", {",
+			"\t",
+			"});"
+		],
+		"description": [
+			"Das ist ein shortcut für die Pickliste"
+		]
+	},
+	"forms": {
+		"prefix": [
+			"forms"
+		],
+		"body": [
+			"// TODO!"
+		],
+		"description": [
+			"Das ist ein shortcut für Forms"
+		]
+	},
+	"modal": {
+		"prefix": [
+			"modal"
+		],
+		"body": [
+			"<div class=\"modal fade\" id=\"modal-${1:id}\" tabindex=\"-1\">",
+			"\t<div class=\"modal-dialog\" role=\"document\">",
+			"\t\t<div class=\"modal-content\">",
+			"\t\t<div class=\"modal-header\">",
+			"\t\t\t<h5 class=\"modal-title\"><i class=\"fas fa-${2:cat}\"></i> ${3:Überschrift}</h5>",
+			"\t\t\t<button type=\"button\" class=\"close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"><i class=\"fas fa-times\"></i></button>",
+			"\t\t</div>",
+			"\t\t<div class=\"modal-body\">",
+			"\t\t\t${4:Inhalt}",
+			"\t\t</div>",
+			"\t\t<div class=\"modal-footer\">",
+			"\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Schließen</button>",
+			"\t\t\t<button type=\"button\" class=\"btn btn-primary\">Speichern</button>",
+			"\t\t</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		],
+	},
+	"card": {
+		"prefix": [
+			"card"
+		],
+		"body": [
+			"<div class=\"card\">",
+			"\t<div class=\"card-body\">",
+			"\t\t<h4 class=\"card-title\"><i class=\"fas fa-${1:icon}\"></i> ${2:Titel}</h4>\n",
+			"\t\t<h6 class=\"subtext\">${3:Das ist der Subtext}</h6>\n\n",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Das ist eine shortcut für Card"
+	},
+	"actionItem": {
+		"prefix": [
+			"action-item"
+		],
+		"body": [
+			"<a class=\"action-item\" href=\"javascript:void(0);\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"${1:Text}\">${2:Icon}</a>"
+		],
+		"description": "Action Item"
+	},
+	"button": {
+		"prefix": [
+			"btn",
+			"button"
+		],
+		"body": [
+			"<button class=\"btn btn-${1:primary}\">${2:Buttontext}</button>"
+		],
+		"description": "Standard Button"
+	},
+	"button-link": {
+		"prefix": [
+			"btn",
+			"button"
+		],
+		"body": [
+			"<a href=\"${3:link}\" class=\"btn btn-${1:primary}\">${2:Buttontext}</a>"
+		],
+		"description": "Standard Link als Button"
+	},
+	"input": {
+		"prefix": [
+			"input"
+		],
+		"body": [
+			"<div class=\"form-group form-floating\">",
+			"\t<input type=\"text\" name=\"${1:name}\" class=\"form-control editable\" placeholder=\"${2:Bezeichnung}\" autocomplete=\"nope\">",
+			"\t<label>${2:Bezeichnung}</label>",
+			"</div>"
+		],
+		"description": "Standard Floating Input"
+	},
+	"inputdate": {
+		"prefix": [
+			"input"
+		],
+		"body": [
+			"<div class=\"form-group form-floating\">",
+			"\t<input type=\"date\" name=\"${1:name}\" class=\"form-control editable\" placeholder=\"${2:Bezeichnung}\" autocomplete=\"nope\" >",
+			"\t<label>${2:Bezeichnung}</label>",
+			"</div>"
+		],
+		"description": "Standard Floating Input"
+	},
+	"textarea": {
+		"prefix": [
+			"textarea"
+		],
+		"body": [
+			"<div class=\"form-group form-floating\">",
+			"\t<textarea class=\"form-control editable\" name=\"${1:name}\" placeholder=\"${2:Bezeichnung}\"></textarea>",
+			"\t<label>${2:Bezeichnung}</label>",
+			"</div>"
+		],
+		"description": "Standard Floating Input"
+	},
+	"select": {
+		"prefix": [
+			"select"
+		],
+		"body": [
+			"<div class=\"form-group form-floating\">",
+			"\t<select class=\"form-select editable\" name=\"${1:name}\" placeholder=\"${2:label}\">",
+			"\t\t<option value=\"\">bitte wählen</option>",
+			"\t</select>",
+			"\t<label>${2:label}</label>",
+			"</div>"
+		],
+		"description": "Standard Floating Input"
+	},
+	"select2": {
+		"prefix": [
+			"select2"
+		],
+		"body": [
+			"<div class=\"form-group form-floating\">",
+			"\t<select class=\"form-select init-select2 editable\" name=\"${1:name}\" placeholder=\"${2:label}\">",
+			"\t\t<option value=\"\">Bitte wählen</option>",
+			"\t</select>",
+			"\t<label>${2:label}</label>",
+			"</div>"
+		],
+		"description": "Standard Floating Input"
+	},
+	"checkbox": {
+		"prefix": [
+			"checkbox"
+		],
+		"body": [
+			" <div class=\"form-group form-floating-check\">",
+			"\t<label class=\"form-label\">${1:Checkbox Linebreak}</label>",
+			"\t<div class=\"form-check\">",
+			"\t\t<input type=\"checkbox\" class=\"form-check-input editable\" id=\"${2:id}\" name=\"${3:name}\" value=\"1\" />",
+			"\t\t<label class=\"form-check-label\" for=\"${4:id}\">${5:Wert}</label>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Checkbox untereinander"
+	},
+	"checkboxinline": {
+		"prefix": [
+			"checkboxinline"
+		],
+		"body": [
+			" <div class=\"form-group form-floating-check\">",
+			"\t<label class=\"form-label\">${1:Checkboxen Inline}</label><br>",
+			"\t<div class=\"form-check form-check-inline\">",
+			"\t\t<input type=\"checkbox\" class=\"form-check-input editable\" id=\"${2:id}\" name=\"${3:name}\" value=\"option1\">",
+			"\t\t<label class=\"form-check-label\" for=\"${2:id}\">${4:Wert}</label>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Checkbox inline"
+	},
+	"checkbox Switch": {
+		"prefix": [
+			"checkbox",
+			"switch"
+		],
+		"body": [
+			" <div class=\"form-group form-floating-check\">",
+			"\t<label class=\"form-label\">${1:Checkbox Linebreak}</label>",
+			"\t<div class=\"form-check form-switch\">",
+			"\t\t<input type=\"checkbox\" class=\"form-check-input editable\" id=\"${2:id}\" name=\"${2:id}\" value=\"1\" />",
+			"\t\t<label class=\"form-check-label\" for=\"${3:id}\">${4:Wert}</label>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Checkbox untereinander"
+	},
+	"radio": {
+		"prefix": [
+			"radio"
+		],
+		"body": [
+			" <div class=\"form-group form-floating-radio\">",
+			"\t<label class=\"form-label\">${1:Radio LineBreack}</label>",
+			"\t<div class=\"form-radio\">",
+			"\t\t<input type=\"radio\" class=\"form-check-input editable\" id=\"${2:id}\" name=\"${3:name}\" value=\"1\" />",
+			"\t\t<label class=\"form-check-label\" for=\"${2:id}\">${4:Wert}</label>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Radios untereinandern"
+	},
+	"radioinline": {
+		"prefix": [
+			"radioinline"
+		],
+		"body": [
+			" <div class=\"form-group form-floating-radio\">",
+			"\t<label class=\"form-label\">${1:Radio Inline}</label><br>",
+			"\t<div class=\"form-radio form-check-inline\">",
+			"\t\t<input class=\"form-check-input editable\" type=\"radio\" id=\"${2:name}\" name=\"${2:name}\" value=\"value1\">",
+			"\t\t<label class=\"form-check-label\" for=\"${2:name}\">value1</label>",
+			"\t</div>",
+			"\t<div class=\"form-radio form-check-inline\">",
+			"\t\t<input class=\"form-check-input editable\" type=\"radio\" id=\"${2:name}\" name=\"${2:name}\" value=\"value2\">",
+			"\t\t<label class=\"form-check-label\" for=\"${2:name}\">value2</label>",
+			"\t</div>",
+			"\t<div class=\"form-radio form-check-inline\">",
+			"\t\t<input class=\"form-check-input editable\" type=\"radio\" id=\"${2:name}\" name=\"${2:name}\" value=\"value3\">",
+			"\t\t<label class=\"form-check-label\" for=\"${2:name}\">value3</label>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Radios inline"
+	},
+	"table": {
+		"prefix": [
+			"table"
+		],
+		"body": [
+			" <table class=\"table\">",
+			"\t<thead>",
+			"\t\t<tr>",
+			"\t\t\t<th>#</th>",
+			"\t\t\t<th>Vorname</th>",
+			"\t\t\t<th>Nachname</th>",
+			"\t\t\t<th>Adress</th>",
+			"\t\t</tr>",
+			"\t</thead>",
+			"\t<tbody>",
+			"\t\t<tr>",
+			"\t\t\t<th>1</th>",
+			"\t\t\t<td>Bob</td>",
+			"\t\t\t<td>Alice</td>",
+			"\t\t\t<td>Peterbergerstr. 1</td>",
+			"\t\t</tr>",
+			"\t</tbody>",
+			"</table>"
+		],
+		"description": "Beispiel Tabelle mit Inhalt"
+	},
+	"fab-single": {
+		"prefix": [
+			"fab",
+			"fab-single"
+		],
+		"body": [
+			"<div class=\"fab-container\">",
+			"\t <button class=\"btn btn-primary ${1:btn-something-add}\"><i class=\"fas fa-plus\"></i></button>",
+			"</div>"
+		],
+		"description": "Fab Button - Single"
+	},
+	"fab-rotate": {
+		"prefix": [
+			"fab",
+			"fab-rotate"
+		],
+		"body": [
+			"  <div class=\"fab-container\">",
+			" \t<button class=\"btn btn-primary btn-sm fab-children\"><i class=\"fas fa-angle-up\"></i></button>",
+			" \t<button class=\"btn btn-primary btn-sm fab-children\"><i class=\"fas fa-angle-up\"></i></button>",
+			" \t<button class=\"btn btn-primary btn-sm fab-children\"><i class=\"fas fa-angle-up\"></i></button>",
+			"\t <button class=\"btn btn-primary fab-parent fab-rotate\"><i class=\"fas fa-angle-up\"></i></button>",
+			" </div>"
+		],
+		"description": "Fab Button Rotate"
+	},
+	"fab-switch": {
+		"prefix": [
+			"fab",
+			"fab-switch"
+		],
+		"body": [
+			"  <div class=\"fab-container\">",
+			" \t<button class=\"btn btn-primary btn-sm fab-children\"><i class=\"fas fa-angle-up\"></i></button>",
+			" \t<button class=\"btn btn-primary btn-sm fab-children\"><i class=\"fas fa-angle-up\"></i></button>",
+			" \t<button class=\"btn btn-primary btn-sm fab-children\"><i class=\"fas fa-angle-up\"></i></button>",
+			"\t <button class=\"btn btn-primary fab-parent fab-switch\" data-switch=\"fas fa-times\"><i class=\"fas fa-plus\"></i></button>",
+			" </div>"
+		],
+		"description": "Fab Button Switch"
+	},
+	"template": {
+		"prefix": [
+			"template",
+			"mockup"
+		],
+		"body": [
+			"<?php include('01_init.php');\n",
+			"\\$_page = [",
+			"\t'title' => \"${1:Template}\"",
+			"];\n",
+			"?>",
+			"<!doctype html>\n",
+			"<head>",
+			"\t<?php include('02_header.php'); ?>",
+			"</head>\n",
+			"<body>",
+			"\t<?php include('03_navigation.php'); ?>",
+			"\t<div class=\"wrapper\">",
+			"\t\t<div class=\"container-fluid\">",
+			"\t\t\t${2:Inhalt}",
+			"\t\t</div>",
+			"\t</div>",
+			"</body>\n",
+			"<?php include('04_scripts.php'); ?>",
+			"<script>",
+			"\t$(document).on('app:ready', function() {",
+			"\t\t// Do Something",
+			"\t});",
+			"</script>",
+			"</html>"
+		],
+		"description": "Standard Template Mockup"
+	},
+	"simpleRequest": {
+		"prefix": [
+			"app.simpleRequest",
+			"simpleRequest"
+		],
+		"body": [
+			"app.simpleRequest(\"${1:task}\", \"${2:file}\", ${3:me.id}, function(response) {",
+			"\tconsole.log(response);",
+			"});"
+		],
+		"description": "Simple Request aus der App"
+	},
+	"javaScriptObjekt": {
+		"prefix": [
+			"opjekt"
+		],
+		"body": [
+			"$(document).ready(function() {",
+			"\t//",
+			"\tvar ${1:objekt} = {",
+			"//",
+			"\t\t${1:name}: function() {",
+			"\t\t\tvar me = $(this);",
+			"\t\t\tg.${2:name2}();",
+			"\t\t},",
+			"\t\t${3:name2}: function() {",
+			"\t\t\t//",
+			"\t\t\t$('${4:id}').on('${5:event}', function() {",
+			"\t\t\t//Do SomeThing",
+			"\t\t});",
+			"\t\t}",
+			"\t}",
+			"g.${6:name}();",
+			"});",
+		],
+		"description": "Standard Javascript Objekt"
+	},
+	"onClick": {
+		"prefix": [
+			"onClick"
+		],
+		"body": [
+			"$('${1:id}').on('${2:click}', function() {",
+			"\t//Do SomeThing",
+			"});",
+		],
+		"description": "Standard Event"
+	},
+	"php-class": {
+		"prefix": [
+			"class-php"
+		],
+		"body": [
+			"<?php",
+			"",
+			"class ${1:Klasse} {",
+			"",
+			"public $$table = \"${2:table}\";",
+			"",
+			"\tfunction __construct() {",
+			"\t\t// Do Something at Construction",
+			"\t}",
+			"",
+			"\tpublic function get($$id) {",
+			"\t\t",
+			"\t\tglobal $$db;",
+			"\t\t$$data = false;",
+			"\t\t",
+			"\t\t$$query = \"SELECT * FROM `\".$$this->table.\"` WHERE `id` = '\".$$id.\"'\";",
+			"\t\t$$result = $$db->query($$query);",
+			"\t\tif($$result->num_rows == 1) {",
+			"\t\t\t$$data = $$result->fetch_assoc();",
+			"\t\t}",
+			"",
+			"\t\treturn $$data;",
+			"\t}",
+			"",
+			"\t// Neu erstellen",
+			"\tpublic function new($$data) {",
+			"",
+			"\t\tglobal $$db;",
+			"\t\t$$success = $$error = $$id = false;",
+			"",
+			"\t\t// Query",
+			"\t\t$$query = \"INSERT INTO `\".$$this->table.\"` SET ",
+			"\t\t\t`field1` = '\".$$data['field1'].\"',",
+			"\t\t\t`field2` = '\".$$data['field2'].\"'",
+			"\t\t\";",
+			"\t\t",
+			"\t\tif($$db->query($$query)) {",
+			"\t\t\t$$id = $$db->insert_id;",
+			"\t\t} else {",
+			"\t\t\t$$error = $$db->error;",
+			"\t\t}",
+			"",
+			"\t\treturn [",
+			"\t\t\t'success' => $$success,",
+			"\t\t\t'error' => $$error,",
+			"\t\t\t'id' => $$id",
+			"\t\t];",
+			"\t}",
+			"",
+			"\tpublic function edit($$id, $$data) {",
+			"\t\t",
+			"\t\tglobal $$db;",
+			"\t\t$$success = $$error = false;",
+			"",
+			"\t\t$$query = \"UPDATE `\".$$this->table.\"` SET ",
+			"\t\t\t`field1` = '\".$$data['field1'].\"',",
+			"\t\t\t`field2` = '\".$$data['field2'].\"'",
+			"\t\t\tWHERE `id` = '\".$$id.\"';",
+			"\t\t \";",
+			"",
+			"\t\tif($$db->query($$query)) {",
+			"\t\t\t$$success = true;",
+			"\t\t} else {",
+			"\t\t\t$$error = $$db->error;",
+			"\t\t}",
+			"",
+			"\t\treturn [",
+			"\t\t\t'success' => $$success,",
+			"\t\t\t'error' => $$error",
+			"\t\t];",
+			"",
+			"\t}",
+			"",
+			"\tpublic function delete($$id) {",
+			"\t\t",
+			"\t\tglobal $$db;",
+			"\t\t$$success = $$error = false;",
+			"",
+			"\t\t$$query = \"DELETE  `\".$$this->table.\"` WHERE `id` = '\".$$id.\"';\";",
+			"\t\t",
+			"\t\tif($$db->query($$query)) {",
+			"\t\t\t$$success = true;",
+			"\t\t} else {",
+			"\t\t\t$$error = $$db->error;",
+			"\t\t}",
+			"",
+			"\t\treturn [",
+			"\t\t\t'success' => $$success,",
+			"\t\t\t'error' => $$error",
+			"\t\t];",
+			"\t}",
+			"}",
+			"?>"
+		],
+		"description": [
+			"Standard Aufbau einer PHP Klasse"
+		]
+	},
+	"class-php-2": {
+		"prefix": [
+			"class-php-2",
+			"class-php-new"
+		],
+		"body": [
+			"<?php",
+			"",
+			"class ${1:Klasse} {",
+			"",
+			"public $$table =  \"${2:table}\";",
+			"",
+			"\tfunction __construct() {",
+			"\t\t// Do Something at Construction",
+			"\t}",
+			"",
+			"\tpublic function get($$id) {",
+			"",
+			"\t\t$$req = new Request();",
+			"",
+			"\t\t$$req->get($$this->table, $$id);",
+			"",
+			"\t\treturn $$req->answer();",
+			"\t}",
+			"",
+			"\t// Neu erstellen",
+			"\tpublic function new($$data) {",
+			"",
+			"\t\t$$req = new Request($$data);",
+			"",
+			"\t\t$$process = [",
+			"\t\t\t['t', 'laufzeit'],",
+			"\t\t\t['s', 'status'],",
+			"\t\t\t['c', 'vertragsende'],",
+			"\t\t\t['dt', 'vertragsbeginn']",
+			"\t\t];",
+			"",
+			"\t\t$$req->insert($$this->table, $$process);",
+			"",
+			"\t\treturn $$req->answer();",
+			"\t}",
+			"",
+			"\tpublic function edit($$id, $$data) {",
+			"",
+			"\t\t$$req = new Request($$data);",
+			"",
+			"\t\t$$process = [",
+			"\t\t\t['t', 'laufzeit'],",
+			"\t\t\t['s', 'status_id'],",
+			"\t\t\t['c', 'vertragsende'],",
+			"\t\t\t['dt', 'vertragsbeginn']",
+			"\t\t];",
+			"",
+			"\t\t$$req->update($$this->table, $$process, 'WHERE `id` = '. $$id .'');",
+			"",
+			"\t\treturn $$req->answer();",
+			"",
+			"\t}",
+			"",
+			"\tpublic function delete($$id) {",
+			"",
+			"\t\t// Request",
+			"\t\t$$req = new Request();",
+			"",
+			"\t\t// Mehrere Löschen",
+			"\t\t$$req->deleteMultiple($$this->tableZaehler, $$id);",
+			"",
+			"\t\t// Rückgabe",
+			"\t\treturn $$req->answer();",
+			"\t}",
+			"}",
+			"?>"
+		]
+	},
+	"icon": {
+		"prefix": [
+			"icon",
+			"fa"
+		],
+		"body": [
+			"<i class=\"fas fa-${1:icon}\"></i>"
+		],
+		"description": "Standard Icon"
+	},
+	"code": {
+		"prefix": [
+			"code"
+		],
+		"body": [
+			"<pre><code class=\"language-${1:html} ctc\">${2:code}</code></pre>"
+		],
+		"description": "Code für Dokumentation"
+	},
+	"hotkey": {
+		"prefix": [
+			"hotkeys"
+		],
+		"body": [
+			"hotkeys('${1:key}', function (event, handler) {",
+			"\t// Do something",
+			"});"
+		],
+		"description": "Code für Hotkeys"
+	},
+	"redirect": {
+		"prefix": [
+			"app.redirect",
+			"redirect"
+		],
+		"body": [
+			"app.redirect(${1:url});"
+		],
+		"description": "Code für Redirect"
+	},
+	"tabs": {
+		"prefix": [
+			"tabs"
+		],
+		"body": [
+			"<nav>",
+			"\t<div class=\"nav nav-tabs\" id=\"tab-nav-${1:name}\">",
+			"\t\t<button class=\"nav-link active\" id=\"tab-nav-${1:name}-1\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-content-${1:name}-1\" type=\"button\">Tab 1</button>",
+			"\t\t<button class=\"nav-link\" id=\"tab-nav-${1:name}-2\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-content-${1:name}-2\" type=\"button\">Tab 2</button>",
+			"\t\t<button class=\"nav-link\" id=\"tab-nav-${1:name}-3\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-content-${1:name}-3\" type=\"button\">Tab 3</button>",
+			"\t\t<button class=\"nav-link\" id=\"tab-nav-${1:name}-4\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-content-${1:name}-4\" type=\"button\">Tab 4</button>",
+			"\t\t<button class=\"nav-link\" id=\"tab-nav-${1:name}-5\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-content-${1:name}-5\" type=\"button\">Tab 5</button>",
+			"\t</div>",
+			"</nav>",
+			"<br>",
+			"<div class=\"tab-content\" id=\"tab-content-${1:name}\">",
+			"\t<div class=\"tab-pane show active\" id=\"tab-content-${1:name}-1\">",
+			"\t\t<!-- CONTENT 1 -->",
+			"\t</div>",
+			"\t<div class=\"tab-pane\" id=\"tab-content-${1:name}-2\">",
+			"\t\t<!-- CONTENT 2 -->",
+			"\t</div>",
+			"\t<div class=\"tab-pane\" id=\"tab-content-${1:name}-3\">",
+			"\t\t<!-- CONTENT 3 -->",
+			"\t</div>",
+			"\t<div class=\"tab-pane\" id=\"tab-content-${1:name}-4\">",
+			"\t\t<!-- CONTENT 4 -->",
+			"\t</div>",
+			"\t<div class=\"tab-pane\" id=\"tab-content-${1:name}-5\">",
+			"\t\t<!-- CONTENT 5 -->",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Bootstrap Tabs"
+	},
+	"function": {
+		"prefix": [
+			"function"
+		],
+		"body": [
+			"/**",
+			" * ${2:My Func}",
+			" */",
+			"public function ${1:myFunc()} {",
+			"\t$req = new Request();",
+			"\treturn $req->answer();",
+			"}"
+		],
+		"description": "Standard Funktion für PHP Klasse Funktionen"
+	},
+	"php-Print": {
+		"prefix": [
+			"php-Print, echo"
+		],
+		"body": [
+			"echo \"<pre>\";",
+			"print_r(${1:variable});",
+			"echo \"</pre>\";",
+			"die();"
+		],
+		"description": "PHP print für das Debugen"
+	},
+	"consoleLog": {
+		"prefix": [
+			"consoleLog"
+		],
+		"body": [
+			"console.log(${1:variable});"
+		],
+		"description": "console.log in JS Datei"
+	},
+	"answer": {
+		"prefix": [
+			"answer"
+		],
+		"body": [
+			"if(!${1:$$r1}['success']) {",
+			"\treturn $$req->answer(${1:$$r1});",
+			"}"
+		],
+		"description": "Request Answer bei Fehler"
+	},
+	"fontawesome": {
+		"prefix": [
+			"fontawesome",
+			"i",
+			"<i",
+			"icon"
+		],
+		"body": [
+			"<i class=\"fa-${1:solid} fa-${2:user}\"></i>",
+		],
+		"description": "Icons"
+	},
+	"quickselect": {
+		"prefix": [
+			"quickselect"
+		],
+		"body": [
+			"<div class=\"form-group form-floating\">",
+			"\t<select class=\"form-select init-quickselect editable\" data-qs-name=\"${1:liste}\" name=\"${2:name}\" placeholder=\"${3:label}\">",
+			"\t\t<option value=\"\">Bitte wählen</option>",
+			"\t</select>",
+			"\t<label>${3:label}</label>",
+			"</div>"
+		],
+		"description": "Standard Quickselect Mockup"
+	},
+	"quickselect-buttons": {
+		"prefix": [
+			"quickselect", "quickselect-buttons"
+		],
+		"body": [
+			"<div class=\"qs-buttons d-flex justify-content-between\">",
+			"\t<div class=\"form-group form-floating form-select2-multi-column flex-grow-1\">",
+			"\t\t<select class=\"form-select init-quickselect editable\" data-qs-name=\"${1:liste}\" name=\"${2:name}\" placeholder=\"${3:label}\">",
+			"\t\t</select>",
+			"\t\t<label>${3:label}</label>",
+			"\t</div>",
+			"\t<div class=\"btn-group align-self-start pt-4 ps-2\">",
+			"\t\t<button type=\"button\" class=\"btn btn-primary\" data-action=\"search\"><i class=\"fa-solid fa-search\"></i></button>",
+			"\t\t<button type=\"button\" class=\"btn btn-primary\" data-action=\"edit\" data-validate=\"single\"><i class=\"fa-edit fa-search\"></i></button>",
+			"\t\t<button type=\"button\" class=\"btn btn-primary\" data-action=\"add\"><i class=\"fa-edit fa-add\"</i></button>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Standard Quickselect Mockup mit Buttons"
+	}
+}

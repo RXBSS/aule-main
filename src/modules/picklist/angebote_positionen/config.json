@@ -1,0 +1,111 @@
+{
+    "title": "<i class=\"fa-solid fa-table\"></i> Positionen",
+
+    "table": {
+        "name": "angebote_positionen_v",
+        "joins": [
+            "LEFT JOIN `artikel` ON `angebote_positionen_v`.`artikel_id` = `artikel`.`id`",
+            "LEFT JOIN `hersteller` ON `artikel`.`hersteller_id` = `hersteller`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "reihenfolge": {
+            "title": "#"
+        },        
+        "artikel_id": {
+            "title": "Artikel ID"
+        },
+        "artikel_hersteller": {
+            "title": "Artikel Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung"
+        },
+        "artikel_bezeichnung": {
+            "title": "Artikel Bezeichnung",
+            "table": "artikel",
+            "field": "bezeichnung"
+        },
+        "menge": {
+            "title": "Menge",
+            "format": "number",
+            "format-config": [1]
+        },
+        "bestand": {
+            "title": "Verfügbar",
+            "type": "special",
+            "format": "number",
+            "format-config": [1],
+            "tooltip": "Warenbestand im Hauptlager"
+        },
+        "ek": {
+            "title": "EK (Einzel)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "vk": {
+            "title": "Netto (Einzel)",
+            "format": "betrag"
+        },
+        "rabatt_prozent": {
+            "title": "Rabatt (%)",
+            "format": "number",
+            "format-config": [2],
+            "hidden": true
+        },
+        "rabatt_wert": {
+            "title": "Rabatt",
+            "format": "betrag",
+            "hidden": true
+        },
+        "rabatt_kombi": {
+            "title": "Rabatt",
+            "type": "special",
+            "hidden": true
+        },
+        "vk_inkl_rabatt": {
+            "title": "Netto",
+            "format": "betrag",
+            "hidden": true
+        },
+        "netto_inkl_rabatt_gesamt": {
+            "title": "Netto (Gesamt)",
+            "format": "betrag"
+        },
+        "steuer": {
+            "title": "MwST %",
+            "format": "number",
+            "format-config": [1],
+            "hidden": true
+        },
+        "steuer_wert": {
+            "title": "Steuer Wert",
+            "format": "betrag",
+            "hidden": true
+        },
+        "steuer_wert_gesamt": {
+            "title": "Steuer Wert (Gesamt)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "brutto": {
+            "title": "Brutto (Einzel)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "brutto_gesamt": {
+            "title": "Brutto (Gesamt)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "langtext": {
+            "hidden": true
+        },
+        "notiz": {
+            "hidden": true
+        }
+    }
+}

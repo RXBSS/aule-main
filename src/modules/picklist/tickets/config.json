@@ -1,0 +1,26 @@
+{
+    "title": "Tickets",
+    "table": {
+        "name": "tickets",
+        "joins": [
+            "LEFT JOIN `status` s ON s.`status_id` = `tickets`.`status_id` AND `s`.`bereich` = 'tickets'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "titel": {
+            "title": "Titel"
+        },
+        "erstellt": {
+            "title": "Erstellt",
+            "format": "datetime"
+        },
+        "status_bezeichnung": {
+            "title": "Status",
+            "table": "s",
+            "field": "bezeichnung"
+        }
+    }
+}

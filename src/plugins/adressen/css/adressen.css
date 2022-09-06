@@ -1,0 +1,106 @@
+.custom-plugin-class {
+    color:red;
+}
+
+/* #google-such-task {
+    background-color: gray;
+} */
+
+.tooltip-inner {
+    max-width: 250px;
+    /* If max-width does not work, try using width instead */
+    width: 250px; 
+    white-space: pre-wrap;
+
+}
+
+#adressen_information_checkbox {
+    margin-bottom: -19px;
+}
+
+#google-search-row {
+    padding: 10px 94px;
+}
+
+/* Google Search andere Farbe */
+#google-search-row .form-control {
+    color: white;
+    background-color: #495057 !important;
+
+}
+
+#google-search::placeholder {
+    color: white;
+}
+
+.dark-row.dark-mode {
+    background-color: #495057;
+    color: white;
+}
+
+.pac-container.pac-logo {
+    z-index: 999999;
+}
+
+.oeffnungszeiten-table thead,
+.oeffnungszeiten-table tbody,  
+.oeffnungszeiten-table tfoot,  
+.oeffnungszeiten-table tr,  
+.oeffnungszeiten-table td,  
+.oeffnungszeiten-table th {
+    background-color: #495057;
+}
+
+
+
+#modal-adressen-form .icon-col {
+    margin-right: -35px;;
+}
+
+#modal-adressen-form .input-col {
+    margin-top: -35px;
+}
+
+#mehr-anzeigen-label {
+    border-color: white;
+    background-color: white;
+    color: #7ab929;
+}
+
+#mehr-anzeigen-label:hover {
+    border-color: white;
+    color: #7ab929;
+}
+
+#mehr-anzeigen-label:checked {
+    border-color: white;
+    color: #7ab929;
+}
+
+#mehr-anzeigen-label:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
+}
+
+.dark-row.dark-mode {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.alert.alert-warning {
+    margin-top: 10px;
+}
+
+/* Gestrichelte Linie Unterhalb der Radios */
+.label-info {
+    position: relative;
+}
+
+.label-info:after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 1px dashed #7AB929;
+}

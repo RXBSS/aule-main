@@ -1,0 +1,20 @@
+{
+    "title": "<i class=\"fa-solid fa-boxes\"></i> Artikelgruppen",
+    "table": {
+        "name": "artikel_gruppen",
+        "joins": "LEFT JOIN `artikel_zuordnung` ON `artikel_zuordnung`.`id` = `artikel_gruppen`.`zuordnung_id` "
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "zuordnung": {
+            "title": "Artikelzuordnung",
+            "table": "artikel_zuordnung",
+            "field": "bezeichnung"
+        }
+    }
+}

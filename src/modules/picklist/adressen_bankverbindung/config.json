@@ -1,0 +1,29 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Bankverbindung",
+    "table": {
+        "name": "adressen_bankverbindung",
+        "joins": [
+            "LEFT JOIN `adressen` ON `adressen_bankverbindung`.`adressen_id` = `adressen`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "adressen_id": {
+            "title": "adressen_id",
+            "hidden": true
+        },
+        "iban": {
+            "title": "IBAN"
+        },
+        "bic": {
+            "title": "BIC"
+        },
+        "bank": {
+            "title": "Bank"
+        }
+        
+    }
+}

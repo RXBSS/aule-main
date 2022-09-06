@@ -1,0 +1,53 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Ident",
+    "table": {
+        "name": "ident",
+        "joins": [
+            "LEFT JOIN `adressen` a1 ON `ident`.`betreiber_id` = `a1`.`id`",
+            "LEFT JOIN `adressen` a2 ON `ident`.`rechnungsempfaenger_id` = `a2`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "haupt_id": {
+            "title": "Haupt ID"
+        },
+        "betreiber_id": {
+            "title": "Betreiber ID",
+            "hidden": true
+        },
+        "betreiber_name": {
+            "title": "Betreiber Name",
+            "table": "a1",
+            "field": "name"
+        },
+        "rechnungsempfaenger_id": {
+            "title": "Rechnungsempfänger",
+            "hidden": true
+        },
+        "rechnungsempfaenger_name": {
+            "title": "Rechnungsempfänger Name",
+            "table": "a2",
+            "field": "name"
+        },
+        
+        "seriennummer": {
+            "title": "Seriennummer"
+        },
+        "standort": {
+            "title": "Standort"
+        },
+        "kunden_referenz": {
+            "title": "Kunden Referenz"
+        },
+        "kunden_kostenstelle": {
+            "title": "Kunden Kostenstelle"
+        },
+        "installationsdatum": {
+            "title": "Installationsdatum",
+            "format": "date"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Zahlungsbedingungen",
+    "table": {
+        "name": "zahlungsbedingungen"
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "text": {
+            "title": "Text"
+        },
+        "abbuchung": {
+            "title": "Abbuchung",
+            "format": "yes-no",
+            "format-config": ["<i class=\"fa-solid fa-thumbs-up text-primary\"> </i> Ja","<i class=\"fa-solid fa-thumbs-down text-warning  \"> </i> Nein"]
+        },
+        "tage": {
+            "title": "Tage"
+        },
+        "skonto_tage": {
+            "title": "Skonto in Tage"
+        },
+        "skonto_prozent": {
+            "title": "Skonto in %"
+        }
+        
+    }
+}

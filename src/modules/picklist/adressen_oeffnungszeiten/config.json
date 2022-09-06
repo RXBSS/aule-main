@@ -1,0 +1,56 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Bankverbindung",
+    "table": {
+        "name": "adressen_oeffnungszeiten",
+        "joins": [
+            "LEFT JOIN `adressen` ON `adressen_oeffnungszeiten`.`adressen_id` = `adressen`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "adressen_id": {
+            "title": "adressen_id",
+            "hidden": true
+        },
+        "tag": {
+            "title": "Tag",
+            "hidden": true
+        },
+        "offen": {
+            "title": "Offen",
+            "hidden": true
+        },
+        "von1": {
+            "title": "Von",
+            "sortable": false,
+            "hidden": true
+        },
+        "bis1": {
+            "title": "Bis",
+            "sortable": false,
+            "hidden": true
+        },
+        "von2": {
+            "title": "Von",
+            "sortable": false,
+            "hidden": true
+        },
+        "bis2": {
+            "title": "Bis",
+            "sortable": false,
+            "hidden": true
+        },
+        "tag2": {
+            "type": "special",
+            "title": "Tag"
+        },
+        "zeit1": {
+            "type": "special",
+            "title": "Öffnungszeit"
+        }
+        
+    }
+}

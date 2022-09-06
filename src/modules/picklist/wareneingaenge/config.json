@@ -1,0 +1,39 @@
+{
+    "title": "<i class=\"fa-solid fa-file-import\"></i> Wareneingänge",
+
+
+    "table": {
+        "name": "wareneingaenge",
+        "joins": [
+            "LEFT JOIN `adressen` ON `wareneingaenge`.`lieferant_id` = `adressen`.`id`",
+            "LEFT JOIN `status` ON `status`.`status_id` = `wareneingaenge`.`status_id` AND `status`.`bereich` = 'wareneingang'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "lieferant_name": {
+            "title": "Name",
+            "table": "adressen",
+            "field": "lieferant_bezeichnung"
+        },
+        "status_name": {
+            "title": "Status",
+            "table": "status",
+            "field": "bezeichnung"
+        },
+        "status_icon": {
+            "title": "Status Icon",
+            "table": "status",
+            "field": "icon",
+            "hidden": true
+        },
+        "liefernummer": {
+            "title": "Liefernummer"
+        },
+        "lieferdatum": {
+            "title": "Lieferdatum"
+        }
+    }
+}

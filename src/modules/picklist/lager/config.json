@@ -1,0 +1,19 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Lagerverwaltung",
+    "table": {
+        "name": "lager"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "kommission": {
+            "title": "Kommission",
+            "format": "yes-no",
+            "format-config": ["<i class=\"fa-solid fa-thumbs-up text-primary\"> </i> Ja","<i class=\"fa-solid fa-thumbs-down text-warning  \"> </i> Nein"]
+        }
+    }
+}

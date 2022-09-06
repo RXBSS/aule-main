@@ -1,0 +1,158 @@
+
+.nav-tabs .nav-link {
+    border: 0;
+    color: #9c9c9c;
+    position: relative;
+    font-size: .95rem;
+    transition: color .4s;
+}
+
+.nav-tabs:not([class*=nav-tabs--]) .nav-link.active {
+    color: #7ab929;
+}
+
+.fa-toggle-on {
+    color: #7ab929;
+}
+
+.fa-toggle-off {
+    color: #f39c12;
+}
+
+#adressen-personen-ansichten {
+    margin-right: 40px;
+}
+
+#adressen-personen-ansichten .fas {
+    font-size: 25px;
+}
+
+/* .dataTables_buttons {
+    border-bottom: 0px solid #d0d0d0;
+} */
+
+.custom-plugin-class {
+    color:red;
+}
+
+#adressen-personen-form .fas {
+    font-size: 18px;
+    /* color: #7ab929; */
+}
+
+#adressen-personen-form .icon-col {
+    margin-right: -35px;;
+}
+
+#adressen-personen-form .input-col {
+    margin-top: -35px;
+}
+
+.dataTables_buttons {
+    /* border-bottom: 0px solid #d0d0d0; */
+}
+
+.pac-container.pac-logo {
+    z-index: 999999;
+}
+
+.oeffnungszeiten-table table tr {
+    background-color: #333333;;;
+    color: white;
+}
+
+.oeffnungszeiten-container .card-title {
+    color: white;
+}
+
+/* .sub-card.oeffnungszeiten-container tbody tr {
+    background-color: #484848;
+    color: white;
+}  */
+
+
+#google-search-row {
+    /* padding: 10px 94px; */
+}
+
+/* Google Search andere Farbe */
+#google-search-row .form-control {
+    color: white;
+    background-color: #495057 !important;
+
+}
+
+#google-search::placeholder {
+    color: white;
+}
+
+.dark-row.dark-mode {
+    background-color: #495057;
+    color: white;
+}
+
+
+/* Toggler Kontosperre Color auf Danger */
+#kontosperre {
+    background-color: #FF5722;
+    border-color: #FF5722;
+}
+
+.mt-20 {
+    margin-top:-20px;
+}
+
+#kontakte .form-floating .select2-container .select2-selection--single .select2-selection__rendered {
+    color: white;
+} 
+
+/* Spinner Lädt die Kontodaten */
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 1.5rem !important;
+}
+
+/* Visitenkarten Styling */
+#adressen-kontakte-card .visitenkarte {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: #fff;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    /* min-height: 180px; */
+} 
+  
+#adressen-kontakte-card .user-icon {
+    color: #aaa;
+}
+
+#adressen-kontakte-card a {
+    color: #7ab929;
+}
+
+#adressen-kontakte-card .kontakt-info {
+    padding-left: 10px;
+}
+
+#adressen-kontakte-card {
+    margin-bottom: 1cm;
+    margin-top: 0.5cm;
+}
+
+#adressen-kontakte-card .text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+/* Sweet Alert Kontakte Button Farbe */
+.swal2-shown .swal2-container .swal2-actions .swal2-cancel {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+.progress-bar {
+    background-color: grey;
+}

@@ -1,0 +1,46 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Akquise Aktionen",
+
+
+    "table": {
+        "name": "akquise_aktionen",
+        "joins": [
+            "LEFT JOIN `mitarbeiter` ON `akquise_aktionen`.`ersteller_id` = `mitarbeiter`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "name": {
+            "title": "Name",
+            "sortable": false
+        },
+        "vorname": {
+            "title": "Ersteller",
+            "table": "mitarbeiter",
+            "field": "vorname",
+            "sortable": false
+        },
+        "nachname": {
+            "title": "Ersteller",
+            "table": "mitarbeiter",
+            "field": "nachname",
+            "hidden": true
+        },
+        "zeitstempel": {
+            "title": "Erstellt am",
+            "format": "date"
+        },
+        "entwurf": {
+            "title": "Entwurf",
+            "format": "yes-no",
+            "format-config": ["<i class=\"fa-solid fa-play text-primary\"> Aktiv</i>","<i class=\"fa-solid fa-pause text-danger\"> Entwurf</i>"]
+        },
+        "wiedervorlage_nach": {
+            "title": "Wiedervorlage Nach",
+            "hidden": true
+            
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.custom-plugin-class {
+    color:red;
+}
+
+#modal-kontakte-form .fas {
+    font-size: 18px;
+    /* color: #7ab929; */
+}
+
+#modal-kontakte-form .icon-col {
+    margin-right: -35px;;
+}
+
+#modal-kontakte-form .input-col {
+    margin-top: -35px;
+}

@@ -1,0 +1,60 @@
+.detail-status {
+    padding:0;
+}
+
+.detail-status-inner {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+}
+
+#positionen-gesamtsumme {
+
+    background: #eee;
+    border: 2px solid #ddd;
+    padding: 10px;
+
+    table {
+        
+        width: 100%;
+
+        td {
+            background: #eee;
+        }
+        
+        td:last-child {
+            text-align:right;
+        }
+
+    }    
+}
+
+
+
+// Damit bei der Sidebar die Texte keinen Großen Margin haben
+.sidebar p {
+    margin-bottom: 0 !important;
+}
+
+// Label Dashes
+/* Gestrichelte Linie Unterhalb der Radios */
+.form-radio .label-info {
+    position: relative;
+}
+
+.form-radio .label-info:after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 1px dashed #7AB929;
+}
+
+// Eine Klasse die Buttons und Anchor disabled
+button.pointer-none, a.pointer-none {
+    pointer-events: none;
+}
+
+

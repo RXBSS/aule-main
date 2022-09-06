@@ -1,0 +1,46 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Bestellungen",
+    "table": {
+        "name": "bestellungen",
+        "joins": [
+            "LEFT JOIN `adressen` ON `bestellungen`.`lieferant_id` = `adressen`.`id`",
+            "LEFT JOIN `status` s1 ON s1.`status_id` = `bestellungen`.`status_id` AND s1.`bereich` = 'bestellungen'",
+            "LEFT JOIN `status` s2 ON s2.`status_id` = `bestellungen`.`bestell_art` AND s2.`bereich` = 'bestellungen_art'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "status_name": {
+            "title": "Status",
+            "table": "s1",
+            "field": "bezeichnung"
+        },
+        "lieferant_name": {
+            "title": "Name",
+            "table": "adressen",
+            "field": "lieferant_bezeichnung"
+        },
+        "status_icon": {
+            "title": "Status Icon",
+            "table": "s1",
+            "field": "icon",
+            "hidden": true
+        },
+        "bestell_datum": {
+            "title": "Bestelldatum",
+            "format": "datetime"
+        },
+        "liefertermin": {
+            "title": "Liefertermin",
+            "format": "date"
+        },
+        "bestell_art": {
+            "title": "Status",
+            "table": "s2",
+            "field": "bezeichnung"
+        }
+        
+    }
+}

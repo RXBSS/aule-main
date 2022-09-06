@@ -1,0 +1,14 @@
+{
+    "title": "Zähler",
+    "table": {
+        "name": "zaehler"
+    },
+    "fields": {
+        "id": {
+            "title": "Id"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        }
+    }
+}

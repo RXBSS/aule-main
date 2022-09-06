@@ -1,0 +1,234 @@
+.custom-plugin-class {
+    color:red;
+}
+
+.status-margin-top {
+    margin-top: -20px;
+}
+
+.padding-righ-icons {
+    padding-right: 20px;
+}
+
+.padding-righ-icons .fa-solid {
+    font-size: 17px;
+    padding-left: 5px;
+}
+
+/* SummerNote Toolbar */
+.note-insert, .note-style, .note-table, .note-para, .note-color, .note-fontname, .note-view {
+    display: none;
+}
+
+/* Fragezeichen hat dann Abstand oben */
+.questionmark-info {
+    padding-top:32px;
+    padding-left: 10px;
+}
+
+/* Wiedervorlage Voreinstellungen Datum */
+.wiedervorlage-voreinstellungen {
+    padding-top:32px;
+    padding-right: 10px;
+}
+
+.wiedervorlage-voreinstellungen .fas, .wiedervorlage-voreinstellungen .fa-solid {
+    font-size: 20px;
+}
+
+/* Timeline Abstanden nach untern damit nicht zusammen gequetscht ist */
+.timeline .is-past {
+    margin-bottom: 15px;
+}
+
+/* Gestrichelte Linie Unterhalb der Radios */
+.label-info {
+    position: relative;
+}
+
+.label-info:after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 1px dashed #7AB929;
+}
+
+/* Reset Datum mit X */
+.reset-date .fa-solid {
+    color: red;
+    font-size: 18px;
+}
+
+.reset-date {
+    padding-top:32px;
+    padding-left: 10px;
+}
+
+/* Ersichtlich machen das der Bearbeiter gewechselt wurde */
+#akquise-timeline .fas.fa-arrow-right {
+    color: red;
+}
+
+/* Wiedervorlage Info -- Status Info*/
+/* #aktuelle-wiedervorlage-info */
+#aktuelle-status-info {
+    margin-top: 18px;
+}
+
+/* Actions im Header */
+.modal-header .fa-solid {
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+/* Abstand zwischen Schließen und den Action Buttons */
+.modal-header .btn-schliessen {
+    /* padding-left: 20px; */
+}
+
+/* Deny Button Margin rechts */ 
+.swal2-actions .swal2-deny.btn.btn-danger {
+    margin-left: 10px;
+}
+
+/* Sweet Alert im Zweiten Fenster anpassen */
+.swal-wide {
+    width: 35em;
+}
+
+/* Status Hover */
+/* Nicht Erfolgreich */
+#akquise-timeline-modal .action-item.fa-thumbs-down:hover {
+    color: #c0392b !important;
+}
+/* Erfolgreich */
+#akquise-timeline-modal .action-item.fa-thumbs-up:hover {
+    color: #7ab929 !important;
+}
+/* Gelöscht */
+#akquise-timeline-modal .action-item.fa-trash:hover {
+    color: #000 !important;
+}
+/* Offen */
+#akquise-timeline-modal .action-item.fa-hourglass:hover {
+    color: #3498db !important;
+}
+
+/* Status im Header */
+#aktuelle-status-akquise {
+    padding-left: 35px;
+    font-size: 15px;
+}
+
+/* Grey Alert */
+.alert.alert-soft-grey {
+    background-color: #eee;
+    border-color: #eee;
+    color: #999;
+}
+
+/* List Icon Ansicht */
+.fa-solid.hide-list {
+    font-size: 18px;
+}
+
+/* Wenn das Fenster Kleiner wird soll zwischen Timeline und Pickliste Platz sein */
+
+@media (max-width: 990px) {
+
+    #kontakte-pickliste {
+        margin-bottom: 1cm;
+    }
+
+}
+
+/* Visitenkarten Styling */
+#kontakte-card .visitenkarte {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: #eee;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    /* min-height: 180px; */
+} 
+  
+#kontakte-card .user-icon {
+    color: #aaa;
+}
+
+#kontakte-card a {
+    color: #7ab929;
+}
+
+#kontakte-card .kontakt-info {
+    padding-left: 10px;
+}
+
+#kontakte-card {
+    margin-bottom: 1cm;
+}
+
+/* Timeline Style */
+#timeline-styling {
+    max-height: 500px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
+}
+
+/* Abstand Zwischen Timeline und Scrollbar */
+#akquise-timeline {
+    margin-right: 15px
+}
+
+/* Action Item Bell */
+.action-item.fa-solid.fa-bell {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+.text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+/* Zuständigkeit GUI ändern */
+#zustaendigkeit-row {
+    /* margin-top: -0.5cm; */
+    /* margin-bottom: 0.5cm; */
+}
+
+/* Abstand in den <p> Tags entfernen */
+#akquise-timeline p {
+    margin-bottom: 0;
+}
+
+/* Kein Padding */
+#akquise-timeline-modal .modal-body {
+    padding-top: 0;
+}
+
+.offene-akquise {
+    margin-top: 10px;
+}
+
+/* Custom Color */
+.meilenstein {
+    box-shadow: -2px 2px 2px black;
+}
+
+
+/* Eigene Definierte Zeitstemepl Abstand nach oben verringern */
+#zeistempel {
+    padding-top: 0px;
+}
+
+
+/* Damit es einheitlich aussieht kommt ein Abstand zwischen dem ganz rechten Button und dem Schließen Button des Modals */
+.button-akquise-create-pdf {
+    padding-right: 8px;
+}

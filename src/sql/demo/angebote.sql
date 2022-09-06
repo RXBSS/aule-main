@@ -1,0 +1,2 @@
+INSERT INTO `angebote` (`id`, `status_id`, `lieferanschrift_id`, `rechnungsanschrift_id`, `ersteller_id`, `erstellt_datum`, `bearbeiter_id`, `liefertermin`, `kostenstelle_id`) VALUES
+(1, 1, 1, 2, 11, '2022-04-03 14:56:40', 11, NULL, NULL);

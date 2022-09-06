@@ -1,0 +1,65 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Beispiel Liste",
+
+
+    "table": {
+        "name": "software_versionen",
+        "joins": [
+            "LEFT JOIN `software` ON `software_versionen`.`software_id` = `software`.`id`",
+            "LEFT JOIN `status` ON `software_versionen`.`art_id` = `status`.`status_id` AND `status`.`bereich` = 'software'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "software_id": {
+            "title": "Software ID",
+            "hidden": true
+        },
+        "software": {
+            "title": "Software",
+            "table": "software",
+            "field": "bezeichnung"
+        },
+        "versionsnummer": {
+            "title": "Versionsnummer"
+        },
+        "releasedatum": {
+            "title": "Releasedatum",
+            "format": "date"
+        },
+        "major": {
+            "title": "Major",
+            "tooltip": "Eine Major Version ist ein Update mit einem großen Versionssprung",
+            "format": "yes-no",
+            "format-config": ["<i class=\"fa-solid fa-circle\"></i> Major","<i class=\"fa-regular fa-circle\"></i> Minor"]
+        },
+
+        "art_id": {
+            "title": "Art ID",
+            "hidden": true
+        },
+        "art_icon": {
+            "title": "Art Icon",
+            "hidden": true,
+            "table": "status",
+            "field": "icon"
+        },
+        "art": {
+            "title": "Art",
+            "table": "status",
+            "field": "bezeichnung"
+        },
+        "anmerkungen": {
+            "title": "Anmerkung",
+            "hidden": true
+        },
+        "sperre": {
+            "title": "Sperre",
+            "hidden": true
+        }
+
+    }
+}

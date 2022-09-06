@@ -1,0 +1,18 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Verträge Gruppen",
+
+    "table": {
+        "name": "vertraege_gruppen"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "reihenfolge": {
+            "title": "Reihenfolge"
+        }
+    }
+}

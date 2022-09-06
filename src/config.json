@@ -1,0 +1,35 @@
+{	
+    "system": {
+		"name": "ERP-System",
+		"root": "http://localhost:3000/aule/dist/",
+		"id": 2
+	},
+	"db": {
+		"url": "localhost",
+		"user": "root",
+		"password": "",
+		"name": "aule",
+		"salt": "LQwB#R#Kfr"
+	},
+	"mail": {
+		"server": "smtp.ionos.de",
+		"port": "587",
+		"auth": true,		
+		"user": "erp@buerosystemhaus.com",
+		"password": "vL#L7BU12Aomx!yIoSes",
+		"secure": "tls",
+		"sender": "erp@buerosystemhaus.com",
+		"senderName": "Bürosystemhaus Schäfer GmbH & Co. KG",
+		"reply": "erp@buerosystemhaus.com",	
+		"replyName": "Bürosystemhaus Schäfer GmbH & Co. KG",
+		"debug": true,
+		"debugMail": "t.pitzer@buerosystemhaus.de"
+	},
+	"address": {
+		"name": "Bürosystemhaus Schäfer GmbH & Co. KG",
+		"street": "Haimbacher Straße 24",
+		"zip": "36041",
+		"city": "Fulda",
+		"country": "Deutschland"
+	}
+}

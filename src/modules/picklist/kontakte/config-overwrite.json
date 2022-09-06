@@ -1,0 +1,46 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Kontakte",
+    "table": {
+        "name": "kontakte"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "geschlecht": {
+            "title": "Geschlecht"
+        },
+        "titel": {
+            "title": "Titel",
+            "hidden": true
+        },
+        "vorname": {
+            "title": "vorname",
+            "hidden": true
+        },
+        "nachname": {
+            "title": "Name",
+            "type": "multi-field",
+            "field": ["vorname", "nachname"],
+            "glue": " "
+        },
+        "telefon": {
+            "title": "Telefon"
+        },
+        "telefax": {
+            "title": "telefax",
+            "hidden": true
+        },
+        "mobil": {
+            "title": "mobil",
+            "hidden": true
+        },
+        "email":{
+            "title": "E-Mail"
+        },
+        "akquise_id": {
+            "title": "akquise_id",
+            "hidden": true
+        }
+    }
+}

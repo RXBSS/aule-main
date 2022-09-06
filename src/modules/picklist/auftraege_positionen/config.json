@@ -1,0 +1,118 @@
+{
+    "title": "<i class=\"fa-solid fa-table\"></i> Positionen",
+
+
+    "table": {
+        "name": "auftraege_positionen",
+        "joins": [
+            "LEFT JOIN `artikel` ON `auftraege_positionen`.`artikel_id` = `artikel`.`id`",
+            "LEFT JOIN `hersteller` ON `artikel`.`hersteller_id` = `hersteller`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "reihenfolge": {
+            "title": "#"
+        },
+        "artikel_id": {
+            "title": "Artikel ID"
+        },
+        "artikel_hersteller": {
+            "title": "Artikel Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung"
+        },
+        "artikel_bezeichnung": {
+            "title": "Artikel Bezeichnung",
+            "table": "artikel",
+            "field": "bezeichnung"
+        },
+        "menge": {
+            "title": "Menge",
+            "format": "number",
+            "format-config": [1]
+        },
+        "geliefert": {
+            "title": "Geliefert",
+            "format": "number",
+            "format-config": [1]
+        },
+        "bestand": {
+            "title": "Verfügbar",
+            "type": "special",
+            "format": "number",
+            "format-config": [1],
+            "tooltip": "Warenbestand im Hauptlager"
+        },
+        "bestellt": {
+            "title": "Bestellt",
+            "type": "special",
+            "format": "number",
+            "format-config": [1],
+            "tooltip": "Aktuell bestellte Ware"
+        },
+        "liefern": {
+            "title": "Liefern",
+            "format": "number",
+            "format-config": [1],
+            "class": "highlight"
+        },
+        "bestellen": {
+            "title": "Bestellen",
+            "format": "number",
+            "format-config": [1],
+            "class": "highlight"
+        },
+        "ek": {
+            "title": "EK (Einzel)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "vk": {
+            "title": "Netto (Einzel)",
+            "format": "betrag"
+        },
+        "netto_gesamt": {
+            "field": "(`auftraege_positionen`.`menge` * `auftraege_positionen`.`vk`)",
+            "type": "query",
+            "title": "Netto (Gesamt)",
+            "format": "betrag"
+        },
+        "steuer": {
+            "title": "MwST %",
+            "format": "number",
+            "format-config": [1]
+        },
+        "steuer_betrag": {
+            "field": "`auftraege_positionen`.`vk` * (`auftraege_positionen`.`steuer` / 100 + 1)",
+            "type": "query",
+            "title": "MwSt (Einzel)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "steuer_betrag_gesamt": {
+            "field": "(`auftraege_positionen`.`vk` * `auftraege_positionen`.`menge`) * (`auftraege_positionen`.`steuer` / 100 + 1)",
+            "type": "query",
+            "title": "MwSt. (Gesamt)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "brutto": {
+            "type": "query",
+            "field": "(`auftraege_positionen`.`vk` *  (`auftraege_positionen`.`steuer` / 100 + 1))",
+            "title": "Brutto (Einzel)",
+            "format": "betrag",
+            "hidden": true
+        },
+        "brutto_gesamt": {
+            "field": "((`auftraege_positionen`.`menge` * `auftraege_positionen`.`vk`) * (`auftraege_positionen`.`steuer` / 100 + 1))",
+            "type": "query",
+            "title": "Brutto (Gesamt)",
+            "format": "betrag",
+            "hidden": true
+        }
+    }
+}

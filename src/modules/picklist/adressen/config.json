@@ -1,0 +1,92 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Adressen",
+    "table": {
+        "name": "adressen"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "name": {
+            "title": "Firmenname",
+            "filter": true
+        },
+        "namenszusatz": {
+            "title": "Namenszusatz",
+            
+            "hidden": true
+        },
+        "strasse": {
+            "title": "Straße",
+            "filter": true
+        },
+        "plz": {
+            "title": "PLZ",
+            "filter": true
+        },
+        "ort": {
+            "title": "Ort",
+            "filter": true
+        },
+        "land": {
+            "title": "Land"
+        },
+        "telefon": {
+            "title": "Telefon"
+        },
+        "telefax": {
+            "title": "Telefax",
+            "hidden": true
+        },
+        "email":{
+            "title": "E-Mail"
+        },
+        "website":{
+            "title": "Website",
+            "hidden": true
+        },
+        "steuernummer":{
+            "title": "Steuernummer",
+            "hidden": true
+        },
+        "umsatzsetuer_id":{
+            "title": "Umsatzsetuer ID",
+            "hidden": true
+        },
+        "fahrtzeit":{
+            "title": "Fahrtzeit",
+            "hidden": true
+        },
+        "kilometer":{
+            "title": "Kilometer",
+            "hidden": true
+        },
+        "latitude":{
+            "title": "Latitude",
+            "hidden": true
+        },
+        "longitude":{
+            "title": "Longitude",
+            "hidden": true
+        },
+        "ist_kunde": {
+            "title": "Kunde",
+            "filter": true,
+            "format": "yes-no",
+            "hidden": true
+        },
+        "ist_lieferant": {
+            "title": "Lieferant",
+            "filter": true,
+            "format": "yes-no",
+            "hidden": true
+        },
+        "ist_hersteller": {
+            "title": "Hersteller",
+            "filter": true,
+            "format": "yes-no",
+            "hidden": true
+        }
+        
+    }
+}

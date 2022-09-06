@@ -1,0 +1,103 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Artikel",
+    "table": {
+        "name": "artikel",
+        "joins": [
+            "LEFT JOIN `hersteller` ON `artikel`.`hersteller_id` = `hersteller`.`id`",
+            "LEFT JOIN `artikel_zuordnung` ON `artikel`.`zuordnung_id` = `artikel_zuordnung`.`id`",
+            "LEFT JOIN `artikel_gruppen` ON `artikel`.`artikel_gruppe_id` = `artikel_gruppen`.`id`",
+            "LEFT JOIN `artikel_bestand` ON `artikel`.`id` = `artikel_bestand`.`artikel_id` AND `artikel_bestand`.`lager_id` = '1'",
+            "LEFT JOIN `status` ON `status`.`status_id` = `artikel`.`status_id` AND `status`.`bereich` = 'artikel'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "status_icon": {
+            "title": "St.",
+            "table": "status",
+            "field": "icon"
+        },        
+        "herstellernummer": {
+            "title": "Herstellernummer"
+        },
+        "hersteller": {
+            "title": "Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung",
+            "filter": {
+                "type": "quickselect",
+                "qs-name": "hersteller"
+            }
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "zuordnung": {
+            "title": "Zuordnung",
+            "table": "artikel_zuordnung",
+            "field": "bezeichnung",
+            "filter": {
+                "type": "quickselect",
+                "qs-name": "artikel_zuordnung"
+            }
+        },
+        "artikelgruppe": {
+            "title": "Artikelgruppe",
+            "table": "artikel_gruppen",
+            "field": "bezeichnung",
+            "filter": {
+                "type": "quickselect",
+                "qs-name": "artikel_gruppen"
+            }
+        },
+        "ean": {
+            "title": "EAN",
+            "hidden": true
+        },
+        "ek": {
+            "title": "EK",
+            "format": "betrag"
+        },
+        "vk": {
+            "title": "VK",
+            "format": "betrag"
+        },
+        "bestand": {
+            "title": "Bestand",
+            "table": "artikel_bestand",
+            "format": "number",
+            "format-config": [1],
+            "tooltip": "Warenbestand im Hauptlager"
+        },
+        "ident": {
+            "title": "Ident",
+            "format": "yes-no",
+            "format-config": ["<i class=\"fa-solid fa-shapes text-primary\"></i> Ja", "<i class=\"fa-solid fa-box text-warning\"></i> Nein"]
+        },
+        "ident_typ_id": {
+            "title": "Art",
+            "format": "array",
+            "format-config": ["", "Stand Alone", "Option", "Beides"]
+        },
+        "kommission": {
+            "title": "Kommission",
+            "table": "artikel_bestand"
+        },
+        "bestellt": {
+            "title": "Bestellt",
+            "table": "artikel_bestand"
+        },
+        "status_id": {
+            "title": "Status ID",
+            "hidden": true
+        },
+        "status_bezeichnung": {
+            "title": "Status Bezeichnung",
+            "table": "status",
+            "field": "bezeichnung",
+            "hidden": true
+        }    
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege_vorlagen",
+    "table": {
+        "name": "vertraege_vorlagen",
+        "joins": [
+            "LEFT JOIN status ON status.status_id = vertraege_vorlagen.status_id AND status.bereich = 'vertraege_vorlagen'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "status_id": {
+            "title": "Status",
+            "hidden": true
+        },
+        "status": {
+            "title": "Status",
+            "table": "status",
+            "type": "multi-field",
+            "field": ["icon","bezeichnung"],
+            "glue": " "
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "beschreibung": {
+            "title": "Beschreibung"
+        },
+        "version": {
+            "title": "Version"
+        }
+    }
+}

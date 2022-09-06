@@ -1,0 +1,60 @@
+@page { sheet-size: A4; }
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:´Arial, sans-serif;
+    font-weight:700;
+
+}
+
+body, button, input, select, textarea, label, .popover, p {
+    color: #000;
+    font-family:  Arial, sans-serif;
+    font-size: 10pt;
+    font-weight: 300;
+}
+
+p {
+    margin:0;
+}
+
+
+h1,h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
+}
+
+
+table {
+    width: 100%;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+
+.form td {
+    padding: 2px;
+}
+
+.info td {
+    padding: 5px 0px;
+}
+
+input {
+    font-size: 14px;
+}
+
+table.metadaten {
+    font-size: 8pt;
+    line-height:1;
+}
+
+hr {
+    margin:0;
+    padding:0; 
+}
+
+.kaufkonditionen td {
+    font-size: 14px;
+}

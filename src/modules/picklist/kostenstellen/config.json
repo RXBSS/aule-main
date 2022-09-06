@@ -1,0 +1,24 @@
+{
+    "title": "<i class=\"fa-solid fa-box\"></i> Kostenstellen",
+    "table": {
+        "name": "kostenstellen"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "verkaeufe": {
+            "title": "Verkauf",
+            "format": "yes-no",
+            "format-config": ["Ja","Nein"]
+        },
+        "einkaeufe": {
+            "title": "Einkauf",
+            "format": "yes-no",
+            "format-config": ["Ja","Nein"]
+        }
+    }
+}

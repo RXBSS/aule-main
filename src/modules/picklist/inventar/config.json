@@ -1,0 +1,82 @@
+{
+    "title": "<i class=\"fa-solid fa-industry\"></i> Inventar",
+
+    "table": {
+        "name": "inventar",
+        "joins": [
+            "LEFT JOIN mitarbeiter ON mitarbeiter.id = inventar.kaufperson_id",
+            "LEFT JOIN mitarbeiter m2 ON m2.id = inventar.nutzer_id"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "kaufobjekt": {
+            "title": "Kaufobjekt",
+            "sortable": false
+        },
+        "kaufperson_id": {
+            "title": "Kaufperson",
+            "hidden": true
+        },
+        "vorname": {
+            "title": "Kaufperson",
+            "table": "mitarbeiter",
+            "field": "vorname"
+        },
+        "nachname": {
+            "title": "Bearbeiter",
+            "table": "mitarbeiter",
+            "field": "nachname",
+            "hidden": true
+        },
+        "nutzer_id": {
+            "title": "Nutzer",
+            "hidden": true
+        },
+        "vorname2": {
+            "title": "Nutzer",
+            "table": "m2",
+            "field": "vorname"
+        },
+        "nachname2": {
+            "title": "Nutzer",
+            "table": "m2",
+            "field": "nachname",
+            "hidden": true
+        },
+
+        "seriennummer": {
+            "title": "Seriennummer",
+            "sortable": false
+        },
+        "kaufpreis": {
+            "title": "Kaufpreis"
+        },
+        "beschreibung": {
+            "title": "Beschreibung",
+            "hidden": true
+        },
+        "abschreibezeitraum": {
+            "title": "Abschreibezeitraum",
+            "hidden": true
+        },
+        "kaufdatum": {
+            "title": "Kaufdatum",
+            "format": "date"
+        },
+        "abschreibedatum": {
+            "type": "special",
+            "title": "Abschreibedatum"
+        },
+        "uebrigeZeit": {
+            "type": "special",
+            "title": "Übrige Zeit"
+        },
+        "verleih": {
+            "type": "special",
+            "title": "Verleih"
+        }
+    }
+}

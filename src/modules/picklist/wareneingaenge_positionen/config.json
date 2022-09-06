@@ -1,0 +1,49 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Bestellung wareneingaenge",
+    "table": {
+        "name": "wareneingaenge_positionen",
+        "joins": [
+            "LEFT JOIN `wareneingaenge` ON `wareneingaenge_positionen`.`lieferung_id` = `wareneingaenge`.`id`",
+            "LEFT JOIN `artikel` ON `wareneingaenge_positionen`.`artikel_id` = `artikel`.`id`",
+            "LEFT JOIN `hersteller` ON `artikel`.`hersteller_id` = `hersteller`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "lieferdatum": {
+            "title": "Lieferdatum",
+            "table": "wareneingaenge",
+            "format": "datetime"
+        },
+        "liefernummer": {
+            "title": "Lieferschein",
+            "table": "wareneingaenge"
+        },
+        "artikel_id": {
+            "title": "Artikel ID"
+        },
+        "artikel_hersteller": {
+            "title": "Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung"
+        },
+        "artikel_bezeichnung": {
+            "title": "Bezeichnung",
+            "table": "artikel",
+            "field": "bezeichnung"
+        },
+        "liefermenge": {
+            "title": "Liefermenge",
+            "format": "number",
+            "format-config": [
+                1
+            ]
+        },
+        "seriennummer": {
+            "title": "Seriennummer"
+        }
+    }
+}

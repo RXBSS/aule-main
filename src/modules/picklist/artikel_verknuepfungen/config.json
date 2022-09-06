@@ -1,0 +1,80 @@
+{
+    "title": "Artikel Verknüpfung",
+    "table": {
+        "name": "artikel_verknuepfungen",
+        "joins": [
+            "LEFT JOIN `artikel` a1 ON `artikel_verknuepfungen`.`artikel_id1` = `a1`.`id`",
+            "LEFT JOIN `hersteller` h1 ON `a1`.`hersteller_id` = `h1`.`id`",
+            "LEFT JOIN `artikel` a2 ON `artikel_verknuepfungen`.`artikel_id2` = `a2`.`id`",
+            "LEFT JOIN `hersteller` h2 ON `a2`.`hersteller_id` = `h2`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "art_id": {
+            "title": "Art ID",
+            "hidden": true
+        },
+        "icon": {
+            "title": "Icon",
+            "type": "special"
+        },
+        "art": {
+            "title": "Art",
+            "type": "special"
+        },
+        
+        "artikel_id": {
+            "title": "Artikel ID",
+            "type": "special"
+        },
+        "hersteller_bezeichnung": {
+            "title": "Hersteller",
+            "type": "special"
+        },
+        "artikel_bezeichnung": {
+            "title": "Artikel",
+            "type": "special"
+        },
+        "gehezu": {
+            "title": "Gehe Zu",
+            "type": "special"
+        },
+        
+        "artikel_id1": {
+            "title": "Artikel 1",
+            "hidden": true
+        },
+        "hersteller_bezeichnung1": {
+            "title": "Hersteller 1",
+            "table": "h1",
+            "field": "bezeichnung",
+            "hidden": true
+        },
+        "artikel_bezeichnung1": {
+            "title": "Bezeichnung 1",
+            "table": "a1",
+            "field": "bezeichnung",
+            "hidden": true
+        },
+        "artikel_id2": {
+            "title": "Artikel 2",
+            "hidden": true
+        },
+        "hersteller_bezeichnung2": {
+            "title": "Hersteller 2",
+            "table": "h2",
+            "field": "bezeichnung",
+            "hidden": true
+        },
+        "artikel_bezeichnung2": {
+            "title": "Bezeichnung 2",
+            "table": "a2",
+            "field": "bezeichnung",
+            "hidden": true
+        }
+    }
+}

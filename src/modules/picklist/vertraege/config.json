@@ -1,0 +1,55 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege",
+
+
+    "table": {
+        "name": "vertraege",
+        "joins": [
+            "LEFT JOIN `status` ON `status`.`status_id` = `vertraege`.`status_id` AND `status`.`bereich` = 'vertraege'",
+            "LEFT JOIN `adressen` ON `adressen`.`id` = `vertraege`.`vn_adresse`",
+            "LEFT JOIN `vertraege_vorlagen` ON `vertraege_vorlagen`.`id` = `vertraege`.`vorlagen_id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "status_name": {
+            "title": "Status",
+            "table": "status",
+            "field": "bezeichnung"
+        },
+        "status_icon": {
+            "title": "Status Icon",
+            "table": "status",
+            "field": "icon",
+            "hidden": true
+        },
+        "laufzeit": {
+            "title": "Laufzeit"
+        },
+        "bezeichnung": {
+            "title": "Vorlage",
+            "table": "vertraege_vorlagen",
+            "field": "bezeichnung"
+        },
+        "vertragsbeginn": {
+            "title": "Vertragsbeginn",
+            "format": "date"
+        },
+        "gekuendigt_am": {
+            "title": "Gekündigt am",
+            "format": "date",
+            "sortable": false
+        },
+        "vn_adresse": {
+            "title": "Vertragsnehmer",
+            "table": "adressen",
+            "field": "name"
+        },
+        "version": {
+            "title": "Version",
+            "sortable": false
+        }
+    }
+}

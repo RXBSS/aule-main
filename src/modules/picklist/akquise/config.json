@@ -1,0 +1,74 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> akquise",
+
+
+    "table": {
+        "name": "akquise",
+        "joins": [
+            "LEFT JOIN `mitarbeiter` ON `akquise`.`bearbeiter_id` = `mitarbeiter`.`id`",
+            "LEFT JOIN `adressen` ON `akquise`.`adressen_id` = `adressen`.`id`",
+            "LEFT JOIN `akquise_aktionen` ON `akquise`.`aktion_id` = `akquise_aktionen`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bearbeiterID": {
+            "title": "Bearbeiter",
+            "table": "mitarbeiter",
+            "field": "id",
+            "hidden": true
+        },
+        "vorname": {
+            "title": "Bearbeiter",
+            "table": "mitarbeiter",
+            "field": "vorname"
+        },
+        "nachname": {
+            "title": "Bearbeiter",
+            "table": "mitarbeiter",
+            "field": "nachname",
+            "hidden": true
+        },
+        "adressen": {
+            "title": "Kunde",
+            "table": "adressen",
+            "field": "name"
+        },
+        "aktion_id": {
+            "title": "Aktion",
+            "table": "akquise_aktionen",
+            "field": "name"
+        },
+        "zeitstempel": {
+            "title": "Letzter Eintrag",
+            "format": "date",
+            "sortable": false,
+            "hidden": true
+        },
+        "status": {
+            "title": "Status"
+        },
+        "ablehnungsgrund_id": {
+            "title": "Ablehnungsgrund",
+            "hidden": true
+        },
+        "wiedervorlage": {
+            "title": "Wiedervorlage",
+            "sortable": false
+        },
+        "tage": {
+            "type": "special",
+            "title": "Tage"
+        },
+        "kundentermin": {
+            "title": "Kundentermin",
+            "sortable": false
+        },
+        "kundenterminTage": {
+            "type": "special",
+            "title": "Kundetermin Tage"
+        }
+    }
+}

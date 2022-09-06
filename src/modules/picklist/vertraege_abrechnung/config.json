@@ -1,0 +1,44 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege_abrechnung",
+
+    "table": {
+        "name": "vertraege_abrechnung",
+        "joins": [
+            "LEFT JOIN status s ON s.status_id = vertraege_abrechnung.status_id AND s.bereich = 'vertraege_abrechnung'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "sortable": false,
+            "hidden": true
+        },
+        "faelligkeit": {
+            "title": "Fälligkeit",
+            "format": "date",
+            "sortable": false
+        },
+        "vertrags_id": {
+            "title": "vertrags_id",
+            "sortable": false,
+            "hidden": true
+        },
+        "kosten": {
+            "title": "Kosten",
+            "sortable": false,
+            "format": "betrag",
+            "format-config": ["€"]
+        },
+        "abrechnungsart": {
+            "title": "Abrechnungart"
+        },
+        "status": {
+            "title": "Status",
+            "table": "s",
+            "type": "multi-field",
+            "field": ["icon","bezeichnung"],
+            "glue": " ",
+            "sortable": false
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "source": {
+        "include": ["src/plugins/adressen", "src/js", "src/pages"],
+        "includePattern": ".+\\.js(doc|x)?$"
+    },
+    "recurseDepth": 10,
+    "opts": {
+        "encoding": "utf8",
+        "destination": "./docs/js"
+    }
+}

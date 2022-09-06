@@ -1,0 +1,27 @@
+{
+    "title": "<i class=\"fa-solid fa-code-branch\"></i> Software / Firmware",
+
+
+    "table": {
+        "name": "software",
+        "joins": ["LEFT JOIN `hersteller` ON `software`.`hersteller_id` = `hersteller`.`id`"]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "hersteller": {
+            "title": "Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "firmware": {
+            "title": "Firmware",
+            "tooltip": "Eine Firmware ist eine Software die auf einem Gerät installiert wird",
+            "format": "yes-no"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "title": "<i class=\"fas fa-bahai\"></i> Akquise Meilensteine",
+
+    "table": {
+        "name": "akquise_meilenstein"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "reihenfolge": {
+            "title": "Reihrenfolge"
+        },
+        "text": {
+            "title": "Bezeichnung"
+        },
+        "aktion_id": {
+            "title": "Aktion"
+        }
+    }
+}

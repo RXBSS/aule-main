@@ -1,0 +1,61 @@
+{
+    "title": "<i class=\"fa-solid fa-table\"></i> Positionen",
+
+
+    "table": {
+        "name": "auftraege_positionen",
+        "joins": [
+            "LEFT JOIN `artikel` ON `auftraege_positionen`.`artikel_id` = `artikel`.`id`",
+            "LEFT JOIN `hersteller` ON `artikel`.`hersteller_id` = `hersteller`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "reihenfolge": {
+            "title": "Reihenfolge"
+        },
+        "artikel_id": {
+            "title": "Artikel ID"
+        },
+        "artikel_hersteller": {
+            "title": "Artikel Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung"
+        },
+        "artikel_bezeichnung": {
+            "title": "Artikel Bezeichnung",
+            "table": "artikel",
+            "field": "bezeichnung"
+        },
+        "menge": {
+            "title": "Menge",
+            "format": "number",
+            "format-config": [1]
+        },
+        "bereits": {
+            "title": "Geliefert",
+            "type": "special",
+            "format": "number",
+            "format-config": [1]
+        },
+        "bestand": {
+            "title": "Bestand",
+            "type": "special",
+            "format": "number",
+            "format-config": [1]
+        },
+        "bestellt": {
+            "title": "Bestellt",
+            "type": "special",
+            "format": "number",
+            "format-config": [1]
+        },
+        "lieferbar": {
+            "title": "Lieferbar",
+            "type": "special"
+        }
+    }
+}

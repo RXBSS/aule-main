@@ -1,0 +1,50 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege_positionen",
+
+
+    "table": {
+        "name": "vertraege_positionen",
+        "joins": [
+            "LEFT JOIN `vertraege` ON `vertraege_positionen`.`vertrags_id` = `vertraege`.`id`",
+            "LEFT JOIN `ident` ON `ident`.id = `vertraege_positionen`.`ident_id`",
+            "LEFT JOIN `artikel` ON `artikel`.`id` = `ident`.artikel_id"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "sortable": false,
+            "hidden": true
+        },
+        "vertrags_id": {
+            "title": "Vertrag",
+            "sortable": false,
+            "hidden": true
+        },
+        "ident_id": {
+            "title": "Ident",
+            "sortable": false
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung",
+            "table": "artikel",
+            "field": "bezeichnung"
+        },
+        "vk": {
+            "title": "Verkaufspreis",
+            "table": "artikel",
+            "field": "vk",
+            "hidden": true
+        },
+        "beschreibung": {
+            "title": "Beschreibung",
+            "sortable": false
+        },
+        "pauschale": {
+            "title": "Pauschale",
+            "sortable": false,
+            "format": "betrag",
+            "format-config": ["€"]
+        }
+    }
+}

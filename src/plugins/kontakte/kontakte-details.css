@@ -1,0 +1,23 @@
+
+.nav-tabs .nav-link {
+    border: 0;
+    color: #9c9c9c;
+    position: relative;
+    font-size: .95rem;
+    transition: color .4s;
+}
+
+.nav-tabs:not([class*=nav-tabs--]) .nav-link.active {
+    color: #7ab929;
+}
+
+/* Sweet Alert Kontakte Button Farbe */
+.swal2-shown .swal2-container .swal2-actions .swal2-deny {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+
+
+
+

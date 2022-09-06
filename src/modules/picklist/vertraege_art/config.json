@@ -1,0 +1,15 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> vertraege_art",
+
+    "table": {
+        "name": "vertraege_art"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Vertragsart"
+        }
+    }
+}

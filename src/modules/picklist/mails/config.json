@@ -1,0 +1,43 @@
+{
+    "title": "<i class=\"fas fa-bahai\"></i> Beispiel Liste",
+    "table": {
+        "name": "mails"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "referenz_id": {
+            "title": "Referenz ID"
+        },
+        "referenz_art": {
+            "title": "Referenz Art"
+        },
+        "empfaenger": {
+            "title": "Empfänger"
+        },
+        "versender": {
+            "title": "Versender"
+        },
+        "betreff": {
+            "title": "Betreff"
+        },
+        "erstellt": {
+            "title": "Erstellt",
+            "format": "datetime"
+        },
+        "geplant": {
+            "title": "Geplant",
+            "format": "datetime"
+        },
+        "versendet": {
+            "title": "Versendet",
+            "format": "datetime"
+        },
+        "ergebnis": {
+            "title": "Ergebnis",
+            "format": "yes-no",
+            "format-config": ["Erfolgreich", "Nicht Erfolgreich"]
+        }
+    }
+}

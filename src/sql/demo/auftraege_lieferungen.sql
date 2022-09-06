@@ -1,0 +1,1 @@
+ALTER TABLE `auftraege_lieferungen` AUTO_INCREMENT = 100000;

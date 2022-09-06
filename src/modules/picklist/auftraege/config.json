@@ -1,0 +1,55 @@
+{
+    "title": "<i class=\"fa-solid fa-th-large\"></i> Aufträge",
+    "table": {
+        "name": "auftraege",
+        "primary": "id",
+        "joins": [
+            "LEFT JOIN `adressen` lf ON `lf`.`id` = `auftraege`.`lieferanschrift_id`",
+            "LEFT JOIN `adressen` re ON `re`.`id` = `auftraege`.`rechnungsanschrift_id`",
+            "LEFT JOIN `mitarbeiter` ersteller ON `ersteller`.`id` = `auftraege`.`ersteller_id`",
+            "LEFT JOIN `status` s1 ON s1.`status_id` = `auftraege`.`status_id` AND `s1`.`bereich` = 'auftraege'",
+            "LEFT JOIN `status` s2 ON s2.`status_id` = `auftraege`.`auslieferung_id` AND `s2`.`bereich` = 'lieferungen'"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "status_name": {
+            "title": "Status",
+            "table": "s1",
+            "field": "bezeichnung"
+        },
+        "status_icon": {
+            "title": "Status Icon",
+            "table": "s1",
+            "field": "icon",
+            "hidden": true
+        },
+        "lieferanschrift": {
+            "title": "Lieferung",
+            "table": "lf",
+            "field": "name"
+        },
+        "rechnungsanschrift": {
+            "title": "Rechnung",
+            "table": "re",
+            "field": "name"
+        },
+        "erstellt_datum": {
+            "title": "Erstellt",
+            "format": "datetime"
+        },
+        "erstellt_person": {
+            "type": "multi-field",
+            "table": "ersteller",
+            "field": ["vorname","nachname"],
+            "title": "Ersteller"
+        },
+        "belieferung": {
+            "title": "Belieferung",
+            "table": "s2",
+            "field": "bezeichnung"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "title": "<i class=\"fa-solid fa-database\"></i> Aufträge Lieferungen",
+
+
+    "table": {
+        "name": "auftraege_lieferungen",
+        "joins": "LEFT JOIN `status` ON `auftraege_lieferungen`.`status_id` = `status`.`status_id` AND `status`.`bereich` = 'auftraege_lieferungen'"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "auftrag_id": {
+            "title": "Auftrag",
+            "hidden": true
+        },
+        "zeitstempel": {
+            "title": "Erstellt",
+            "format": "datetime"
+        },
+        "status_icon": {
+            "title": "Status",
+            "table": "status",
+            "field": "icon",
+            "hidden": true
+        },
+        "status_name": {
+            "title": "Status",
+            "table": "status",
+            "field": "bezeichnung"
+        },
+        "show_document": {
+            "type": "special",
+            "title": "Dokument"
+        }
+    }
+}

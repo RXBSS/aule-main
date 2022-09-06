@@ -1,0 +1,35 @@
+{
+    "title": "<i class=\"fa-solid fa-boxes\"></i> Artikelgruppen Attribute",
+    "table": {
+        "name": "artikel_attribute"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "bezeichnung": {
+            "title": "Bezeichnung"
+        },
+        "beschreibung": {
+            "title": "Beschreibung"
+        },
+        "datentyp": {
+            "title": "Datentyp"
+        },
+        "data": {
+            "title": "Data",
+            "hidden": true
+        },
+        "pflichtfeld": {
+            "title": "Pflichtfeld"
+        },
+        "reihenfolge": {
+            "title": "Reihenfolge"
+        },
+        "system": {
+            "title": "System",
+            "hidden": true
+        }
+        
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "title": "<i class=\"fa-solid fa-bahai\"></i> Beispiel Liste",
+
+
+    "table": {
+        "name": "example",
+        "joins": "LEFT JOIN `example_auswahl` ON `example`.`auswahl` = `example_auswahl`.`id`"
+    },
+    "fields": {
+        "id": {
+            "title": "ID"
+        },
+        "name": {
+            "title": "Name"
+        },
+        "beschreibung": {
+            "title": "Beschreibung"
+        },
+        "zeitstempel": {
+            "title": "Zeitstempel",
+            "format": "custom-datetime",
+            "format-config": "Y-M-D"
+        },
+        "betrag": {
+            "title": "Betrag",
+            "format": "betrag"
+        },
+        "checkbox": {
+            "title": "Checkbox",
+            "tooltip": "Die Bechreibung für das Beispiel Checkbox",
+            "format": "yes-no",
+            "format-config": ["<i class=\"fa-solid fa-thumbs-up text-primary\"></i>","<i class=\"fa-solid fa-thumbs-down text-danger\"></i>"]
+        },
+        "zusammenhang": {
+            "title": "Zusammenhang",
+            "tooltip": "Die Bechreibung für ein Zusammengehängtes Feld",
+            "type": "multi-field",
+            "field": ["teil1","teil2"],
+            "glue": "",
+            "hidden": false
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "title": "<i class=\"fa-solid fa-layer-group\"></i> Bestellpositionen",
+    "table": {
+        "name": "bestellungen_positionen",
+        "joins": [
+            "LEFT JOIN `artikel` ON `bestellungen_positionen`.`artikel_id` = `artikel`.`id`",
+            "LEFT JOIN `hersteller` ON `artikel`.`hersteller_id` = `hersteller`.`id`"
+        ]
+    },
+    "fields": {
+        "id": {
+            "title": "ID",
+            "hidden": true
+        },
+        "reihenfolge": {
+            "title": "<i class=\"fa-solid fa-sort-alpha-down\"></i>"
+        },
+        "artikel_id": {
+            "title": "Artikel ID"
+        },
+        "artikel_herstellnummer": {
+            "title": "Hersteller Nr.",
+            "table": "artikel",
+            "field": "herstellernummer"
+        },
+        "artikel_hersteller": {
+            "title": "Hersteller",
+            "table": "hersteller",
+            "field": "bezeichnung"
+        },
+        "artikel_bezeichnung": {
+            "title": "Artikel Bezeichnung",
+            "table": "artikel",
+            "field": "bezeichnung"
+        },
+        "bestellmenge": {
+            "title": "Bestellt",
+            "format": "number",
+            "format-config": [
+                1
+            ]
+        },
+        "liefermenge": {
+            "title": "Geliefert",
+            "format": "number",
+            "format-config": [
+                1
+            ]
+        }
+    }
+}

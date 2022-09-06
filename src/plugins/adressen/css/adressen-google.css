@@ -1,0 +1,24 @@
+.pac-container.pac-logo.hdpi {
+    z-index: 9999;
+}
+
+/* Google Search andere Farbe */
+#google-search-row input {
+    color: white;
+    background-color: #495057 !important;
+
+}
+
+#google-search::placeholder {
+    color: white;
+}
+
+.dark-row.dark-mode {
+    background-color: #495057;
+    color: white;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+
+
